@@ -13,23 +13,24 @@ const Navbar = () => {
     setisAccordianOpen((v) => !v);
   };
 
-  
-  
-
-  const accordionHeight = "navbar-wrapper" + (isAccordianOpen ? " accordOpen" : "");
+  const accordionHeight =
+    "navbar-wrapper" + (isAccordianOpen ? " accordOpen" : "");
   return (
-    <div
-    className={accordionHeight}>
+    <div className={accordionHeight}>
       <div className="accordion-title">
         <BrandLogoLight className="brandlogo" />
         <h1 className="brandname">ridesignMedia</h1>
         <Logo className="hamburg" onClick={toggleAccordion} />
       </div>
-      {isAccordianOpen ? <div className="links"><h1>home</h1>
-      <h1>what we do</h1>
-      <h1>who we are</h1>
-      <h1>blog</h1>
-      <h1>contact us</h1></div> : null}
+      {isAccordianOpen ? (
+        <div className="links">
+          <h1>home</h1>
+          <h1>what we do</h1>
+          <h1>who we are</h1>
+          <h1>blog</h1>
+          <h1>contact us</h1>
+        </div>
+      ) : null}
     </div>
   );
 };
