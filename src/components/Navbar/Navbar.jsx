@@ -27,11 +27,11 @@ const Navbar = () => {
         <h1 className="brandname">ridesignMedia</h1>
         <Logo className="hamburg" onClick={toggleAccordion} />
       </div>
-      {isAccordianOpen ? <><h1>home</h1>
+      {isAccordianOpen ? <div className="links"><h1>home</h1>
       <h1>what we do</h1>
       <h1>who we are</h1>
       <h1>blog</h1>
-      <h1>contact us</h1></> : null}
+      <h1>contact us</h1></div> : null}
     </motion.div>
   );
 };

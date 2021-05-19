@@ -17,7 +17,13 @@
   transition: height 2s ease-in;
 }
 
-.navbar-wrapper > h1{
+.links{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.links h1{
   color: white;
   font-size: x-large;
   margin: 10px auto;
@@ -76,4 +82,26 @@
     cursor: pointer;
   width: 90px;
   height: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-wrapper{
+    height: fit-content;
+  }
+  .accordion-title{
+    height: 100%;
+  }
+  .brandlogo{
+    height: 27px;
+  }
+  .hamburg{
+    height: 20px;
+  }
+  .brandname{
+    font-size: large;
+    transform: translateX(20px);
+  }
+  .links h1{
+    font-size: medium;
+  }
 }
