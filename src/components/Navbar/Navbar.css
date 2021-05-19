@@ -7,14 +7,18 @@
   margin: 30px auto;
   width: 95%;
   background-color: black;
-  height: auto;
+  height: 108px;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  transition: height 2s ease-in;
+  transition: height 0.3s ease-in-out;
+}
+
+.navbar-wrapper.accordOpen{
+  height: 372px;
 }
 
 .links{
@@ -27,9 +31,6 @@
   color: white;
   font-size: x-large;
   margin: 10px auto;
-}
-.navbar-wrapper.openAccord{
-  height: 270px;
 }
 
 .accordion-title {
@@ -86,10 +87,14 @@
 
 @media only screen and (max-width: 600px) {
   .navbar-wrapper{
-    height: fit-content;
+    height: 67px;
+
+  }
+  .navbar-wrapper.accordOpen{
+    height: 283px;
   }
   .accordion-title{
-    height: 100%;
+    height: 27px;
   }
   .brandlogo{
     height: 27px;
