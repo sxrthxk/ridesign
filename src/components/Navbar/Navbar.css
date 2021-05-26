@@ -1,3 +1,9 @@
+.nav-container{
+  height: 168px;
+  position: relative;
+  z-index: 10;
+}
+
 .navbar-wrapper {
   position: fixed;
   left: 50%;
@@ -6,7 +12,12 @@
   box-sizing: border-box;
   margin: 30px auto;
   width: 95%;
-  background-color: black;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   height: 108px;
   border-radius: 25px;
   display: flex;
@@ -17,18 +28,18 @@
   transition: height 0.3s ease-in-out;
 }
 
-.navbar-wrapper.accordOpen{
+.navbar-wrapper.accordOpen {
   height: 372px;
 }
 
-.links{
+.links {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
 
-.links h1{
-  color: white;
+.links h1 {
+  color: black;
   font-size: x-large;
   margin: 10px auto;
 }
@@ -45,15 +56,15 @@
   user-select: none;
   background: -webkit-linear-gradient(
     180deg,
-    #eee,
-    #535353,
-    #eee,
-    #535353,
-    #eee,
-    #535353,
-    #eee,
-    #535353,
-    #eee
+    rgb(150, 150, 150),
+    #131313,
+    rgb(150, 150, 150),
+    #131313,
+    rgb(150, 150, 150),
+    #131313,
+    rgb(150, 150, 150),
+    #131313,
+    rgb(150, 150, 150)
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -72,42 +83,46 @@
   }
 }
 
-.brandlogo{
-    height: 68px;
+.brandlogo {
+  height: 68px;
   width: auto;
   margin: 0;
 }
 
-.hamburg{
-    fill: #fff;
-    cursor: pointer;
+.hamburg {
+  fill: #000;
+  cursor: pointer;
   width: 90px;
   height: 60%;
 }
 
 @media only screen and (max-width: 600px) {
-  .navbar-wrapper{
+  .nav-container{
+    height: 108px;
+  }
+  .navbar-wrapper {
     margin: 10px auto;
     height: 67px;
-
+    width: 90%;
   }
-  .navbar-wrapper.accordOpen{
+  .navbar-wrapper.accordOpen {
     height: 283px;
   }
-  .accordion-title{
+  .accordion-title {
     height: 27px;
   }
-  .brandlogo{
-    height: 27px;
+  .brandlogo {
+    height: 35px;
   }
-  .hamburg{
+  .hamburg {
     height: 20px;
+    margin-right: -20px;
   }
-  .brandname{
+  .brandname {
     font-size: large;
     transform: translateX(20px);
   }
-  .links h1{
+  .links h1 {
     font-size: medium;
   }
 }

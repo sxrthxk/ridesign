@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { ReactComponent as HamburgerMenuLight } from "../../assets/svg/menuLight.svg";
 import { ReactComponent as Cross } from "../../assets/svg/cross.svg";
-import { ReactComponent as BrandLogoLight } from "../../assets/svg/logo-light.svg";
+import { ReactComponent as BrandLogoDark } from "../../assets/svg/logo-dark.svg";
+import reactDom from "react-dom";
 
 const Navbar = () => {
   const [isAccordianOpen, setisAccordianOpen] = useState(false);
   var Logo;
   isAccordianOpen ? (Logo = Cross) : (Logo = HamburgerMenuLight);
+
+
 
   const toggleAccordion = () => {
     setisAccordianOpen((v) => !v);
@@ -16,9 +19,11 @@ const Navbar = () => {
   const accordionHeight =
     "navbar-wrapper" + (isAccordianOpen ? " accordOpen" : "");
   return (
+    reactDom.createPortal(
+      <div className="nav-container">
     <div className={accordionHeight}>
       <div className="accordion-title">
-        <BrandLogoLight className="brandlogo" />
+        <BrandLogoDark className="brandlogo" />
         <h1 className="brandname">ridesignMedia</h1>
         <Logo className="hamburg" onClick={toggleAccordion} />
       </div>
@@ -31,7 +36,7 @@ const Navbar = () => {
           <h1>contact us</h1>
         </div>
       ) : null}
-    </div>
+    </div></div>, document.getElementById("header"))
   );
 };
 
