@@ -1,5 +1,4 @@
 import React from "react";
-import "./WorkSamples.css";
 import styled from "styled-components";
 import image1 from "../../assets/images/image1.jpg";
 import image2 from "../../assets/images/photo_2021-05-25_18-14-47.jpg";

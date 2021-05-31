@@ -1,16 +1,15 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import './App.css'
-import WorkSamples from "./components/WorkSamples";
+import Home from "./components/Home";
 
 function App() {
   return (<>
     <Navbar/>
 
-    <WorkSamples/>
+    <Home/>
+    
 
-    {/* <CustomCarousel/> */}
-   
   </>);
 }
 
