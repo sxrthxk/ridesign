@@ -9,7 +9,6 @@ import image5 from "../../assets/images/photo_2021-05-25_18-15-00.jpg";
 const WorkSamples = () => {
   return (
     <StyledContainer>
-      <StyledTitle>Work Samples :</StyledTitle>
       <StyledSampleContainer>
         <StyledWorkImage src={image1} />
         <StyledWorkImage src={image2} />
@@ -25,12 +24,6 @@ const WorkSamples = () => {
     </StyledContainer>
   );
 };
-
-const StyledTitle = styled.h1`
-  color: white;
-  font-size: 3rem;
-  margin: 1.5rem;
-`;
 
 const StyledContainer = styled.div`
   width: 90%;
