@@ -4,6 +4,7 @@ import { ReactComponent as HamburgerMenuLight } from "../../assets/svg/menuLight
 import { ReactComponent as Cross } from "../../assets/svg/cross.svg";
 import { ReactComponent as BrandLogoDark } from "../../assets/svg/logo-dark.svg";
 import reactDom from "react-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isAccordianOpen, setisAccordianOpen] = useState(false);
@@ -30,9 +31,8 @@ const Navbar = () => {
       {isAccordianOpen ? (
         <div className="links">
           <h1>home</h1>
-          <h1>what we do</h1>
+          <h1>services</h1>
           <h1>who we are</h1>
-          <h1>blog</h1>
           <h1>contact us</h1>
         </div>
       ) : null}
