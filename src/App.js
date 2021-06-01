@@ -1,16 +1,16 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import './App.css'
-import WorkSamples from "./components/WorkSamples";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   return (<>
     <Navbar/>
-    <WorkSamples/>
-    {/* <CustomCarousel/> */}
-   </>
-  )
+
+    <Home/>
+    
+
+  </>);
 }
 
 export default App;
