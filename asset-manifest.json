@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/ridesign/static/css/main.271971e9.chunk.css",
-    "main.js": "/ridesign/static/js/main.03b945a6.chunk.js",
-    "main.js.map": "/ridesign/static/js/main.03b945a6.chunk.js.map",
+    "main.css": "/ridesign/static/css/main.f394ed34.chunk.css",
+    "main.js": "/ridesign/static/js/main.4eaab4ed.chunk.js",
+    "main.js.map": "/ridesign/static/js/main.4eaab4ed.chunk.js.map",
     "runtime-main.js": "/ridesign/static/js/runtime-main.3187301e.js",
     "runtime-main.js.map": "/ridesign/static/js/runtime-main.3187301e.js.map",
-    "static/js/2.75560519.chunk.js": "/ridesign/static/js/2.75560519.chunk.js",
-    "static/js/2.75560519.chunk.js.map": "/ridesign/static/js/2.75560519.chunk.js.map",
+    "static/js/2.93e7286b.chunk.js": "/ridesign/static/js/2.93e7286b.chunk.js",
+    "static/js/2.93e7286b.chunk.js.map": "/ridesign/static/js/2.93e7286b.chunk.js.map",
     "index.html": "/ridesign/index.html",
-    "static/css/main.271971e9.chunk.css.map": "/ridesign/static/css/main.271971e9.chunk.css.map",
-    "static/js/2.75560519.chunk.js.LICENSE.txt": "/ridesign/static/js/2.75560519.chunk.js.LICENSE.txt",
+    "static/css/main.f394ed34.chunk.css.map": "/ridesign/static/css/main.f394ed34.chunk.css.map",
+    "static/js/2.93e7286b.chunk.js.LICENSE.txt": "/ridesign/static/js/2.93e7286b.chunk.js.LICENSE.txt",
     "static/media/cross.7e2a977d.svg": "/ridesign/static/media/cross.7e2a977d.svg",
+    "static/media/email.56058da1.svg": "/ridesign/static/media/email.56058da1.svg",
     "static/media/image1.95341654.jpg": "/ridesign/static/media/image1.95341654.jpg",
+    "static/media/instagram.6ed2cb52.svg": "/ridesign/static/media/instagram.6ed2cb52.svg",
+    "static/media/linkedin.1633a962.svg": "/ridesign/static/media/linkedin.1633a962.svg",
     "static/media/logo-dark.b71da641.svg": "/ridesign/static/media/logo-dark.b71da641.svg",
     "static/media/menuLight.93efd166.svg": "/ridesign/static/media/menuLight.93efd166.svg",
     "static/media/photo_2021-05-25_18-14-47.d9d64953.jpg": "/ridesign/static/media/photo_2021-05-25_18-14-47.d9d64953.jpg",
@@ -21,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3187301e.js",
-    "static/js/2.75560519.chunk.js",
-    "static/css/main.271971e9.chunk.css",
-    "static/js/main.03b945a6.chunk.js"
+    "static/js/2.93e7286b.chunk.js",
+    "static/css/main.f394ed34.chunk.css",
+    "static/js/main.4eaab4ed.chunk.js"
   ]
 }
