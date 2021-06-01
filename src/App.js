@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import './App.css'
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (<>
@@ -9,7 +10,7 @@ function App() {
 
     <Home/>
     
-
+    <Footer/>
   </>);
 }
 
