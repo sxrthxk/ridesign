@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import image1 from "../../assets/images/image1.jpg";
-import image2 from "../../assets/images/photo_2021-05-25_18-14-47.jpg";
-import image3 from "../../assets/images/photo_2021-05-25_18-14-53.jpg";
-import image4 from "../../assets/images/photo_2021-05-25_18-14-54.jpg";
-import image5 from "../../assets/images/photo_2021-05-25_18-15-00.jpg";
+import image1 from "../../../assets/images/image1.jpg";
+import image2 from "../../../assets/images/photo_2021-05-25_18-14-47.jpg";
+import image3 from "../../../assets/images/photo_2021-05-25_18-14-53.jpg";
+import image4 from "../../../assets/images/photo_2021-05-25_18-14-54.jpg";
+import image5 from "../../../assets/images/photo_2021-05-25_18-15-00.jpg";
 
 const WorkSamples = () => {
   return (
