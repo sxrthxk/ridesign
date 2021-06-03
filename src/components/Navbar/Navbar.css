@@ -29,7 +29,7 @@
 }
 
 .navbar-wrapper.accordOpen {
-  height: 372px;
+  height: 340px;
 }
 
 .links {
@@ -106,7 +106,7 @@
     width: 90%;
   }
   .navbar-wrapper.accordOpen {
-    height: 283px;
+    height: 250px;
   }
   .accordion-title {
     height: 27px;

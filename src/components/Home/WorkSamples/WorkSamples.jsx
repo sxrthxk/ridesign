@@ -5,6 +5,7 @@ import image2 from "../../../assets/images/photo_2021-05-25_18-14-47.jpg";
 import image3 from "../../../assets/images/photo_2021-05-25_18-14-53.jpg";
 import image4 from "../../../assets/images/photo_2021-05-25_18-14-54.jpg";
 import image5 from "../../../assets/images/photo_2021-05-25_18-15-00.jpg";
+import { StyledContainer } from "../../UI";
 
 const WorkSamples = () => {
   return (
@@ -25,13 +26,7 @@ const WorkSamples = () => {
   );
 };
 
-const StyledContainer = styled.div`
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+
 
 const StyledSampleContainer = styled.div`
   width: 100%;
