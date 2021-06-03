@@ -32,11 +32,8 @@
 
 }
 
-.contact a{
-    border: 2.5px solid rgb(95, 95, 95);
-    margin: 0px 15px;
-    border-radius: 50%;
-    transition: 0.5s ease;
+a{
+    
 }
 
 .contact a:hover{
