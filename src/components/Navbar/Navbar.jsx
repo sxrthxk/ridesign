@@ -47,6 +47,9 @@ color: black;
   font-weight: bold;
   margin: 10px auto;
   text-decoration: none;
-  `;
+  @media only screen and (max-width: 600px) {
+    font-size: medium;
+  }
+`;
 
 export default Navbar;
