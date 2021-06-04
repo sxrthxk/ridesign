@@ -5,11 +5,11 @@ import Footer from "./components/Footer";
 import Services from "./components/Services";
 import WhoWeAre from "./components/WhoWeAre";
 import ContactUs from "./components/ContactUs";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
       <Switch>
         <Route path="/" children={Home} exact />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/contact-us" children={ContactUs} />
       </Switch>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 
