@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ridesign/static/css/main.7b9a6f7a.chunk.css",
-    "main.js": "/ridesign/static/js/main.f54606ca.chunk.js",
-    "main.js.map": "/ridesign/static/js/main.f54606ca.chunk.js.map",
+    "main.css": "/ridesign/static/css/main.f6618972.chunk.css",
+    "main.js": "/ridesign/static/js/main.a5179209.chunk.js",
+    "main.js.map": "/ridesign/static/js/main.a5179209.chunk.js.map",
     "runtime-main.js": "/ridesign/static/js/runtime-main.3187301e.js",
     "runtime-main.js.map": "/ridesign/static/js/runtime-main.3187301e.js.map",
-    "static/js/2.93e7286b.chunk.js": "/ridesign/static/js/2.93e7286b.chunk.js",
-    "static/js/2.93e7286b.chunk.js.map": "/ridesign/static/js/2.93e7286b.chunk.js.map",
+    "static/js/2.0eecd3f9.chunk.js": "/ridesign/static/js/2.0eecd3f9.chunk.js",
+    "static/js/2.0eecd3f9.chunk.js.map": "/ridesign/static/js/2.0eecd3f9.chunk.js.map",
     "index.html": "/ridesign/index.html",
-    "static/css/main.7b9a6f7a.chunk.css.map": "/ridesign/static/css/main.7b9a6f7a.chunk.css.map",
-    "static/js/2.93e7286b.chunk.js.LICENSE.txt": "/ridesign/static/js/2.93e7286b.chunk.js.LICENSE.txt",
+    "static/css/main.f6618972.chunk.css.map": "/ridesign/static/css/main.f6618972.chunk.css.map",
+    "static/js/2.0eecd3f9.chunk.js.LICENSE.txt": "/ridesign/static/js/2.0eecd3f9.chunk.js.LICENSE.txt",
     "static/media/cross.7e2a977d.svg": "/ridesign/static/media/cross.7e2a977d.svg",
     "static/media/email.d81a1508.svg": "/ridesign/static/media/email.d81a1508.svg",
     "static/media/image1.95341654.jpg": "/ridesign/static/media/image1.95341654.jpg",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3187301e.js",
-    "static/js/2.93e7286b.chunk.js",
-    "static/css/main.7b9a6f7a.chunk.css",
-    "static/js/main.f54606ca.chunk.js"
+    "static/js/2.0eecd3f9.chunk.js",
+    "static/css/main.f6618972.chunk.css",
+    "static/js/main.a5179209.chunk.js"
   ]
 }
