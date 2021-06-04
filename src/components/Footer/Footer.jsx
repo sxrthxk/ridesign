@@ -90,6 +90,7 @@ const StyledLinks = styled.a`
 const StyledCopyright = styled.h1`
   color: white;
   font-size: 1rem;
+  font-weight: 200;
   @media only screen and (max-width: 600px) {
     font-size: 0.8rem;
   }
