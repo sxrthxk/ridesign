@@ -4,20 +4,22 @@ import { ReactComponent as HamburgerMenuLight } from "../../assets/svg/menuLight
 import { ReactComponent as Cross } from "../../assets/svg/cross.svg";
 import { ReactComponent as BrandLogoDark } from "../../assets/svg/logo-dark.svg";
 import reactDom from "react-dom";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Navbar = () => {
-  const [isAccordianOpen, setisAccordianOpen] = useState(false);
+  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   var Logo;
-  isAccordianOpen ? (Logo = Cross) : (Logo = HamburgerMenuLight);
+  isAccordionOpen ? (Logo = Cross) : (Logo = HamburgerMenuLight);
 
 
 
   const toggleAccordion = () => {
-    setisAccordianOpen((v) => !v);
+    setIsAccordionOpen((v) => !v);
   };
 
   const accordionHeight =
-    "navbar-wrapper" + (isAccordianOpen ? " accordOpen" : "");
+    "navbar-wrapper" + (isAccordionOpen ? " accordOpen" : "");
   return (
     reactDom.createPortal(
       <div className="nav-container">
@@ -27,16 +29,24 @@ const Navbar = () => {
         <h1 className="brandname">ridesignMedia</h1>
         <Logo className="hamburg" onClick={toggleAccordion} />
       </div>
-      {isAccordianOpen ? (
+      {isAccordionOpen ? (
         <div className="links">
-          <h1>home</h1>
-          <h1>services</h1>
-          <h1>who we are</h1>
-          <h1>contact us</h1>
+          <StyledLink onClick={toggleAccordion} to="/">home</StyledLink>
+          <StyledLink onClick={toggleAccordion} to="/services">services</StyledLink>
+          <StyledLink onClick={toggleAccordion} to="/who-we-are">who we are</StyledLink>
+          <StyledLink onClick={toggleAccordion} to="contact-us">contact us</StyledLink>
         </div>
       ) : null}
     </div></div>, document.getElementById("header"))
   );
 };
+
+const StyledLink = styled(Link)`
+color: black;
+  font-size: x-large;
+  font-weight: bold;
+  margin: 10px auto;
+  text-decoration: none;
+  `;
 
 export default Navbar;
