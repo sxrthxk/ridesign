@@ -2,9 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import image1 from "../../assets/images/image1.jpg";
 import image2 from "../../assets/images/photo_2021-05-25_18-14-47.jpg";
-import image3 from "../../assets/images/photo_2021-05-25_18-14-53.jpg";
-import image4 from "../../assets/images/photo_2021-05-25_18-14-54.jpg";
-import image5 from "../../assets/images/photo_2021-05-25_18-15-00.jpg";
 import { StyledContainer } from "../UI";
 
 const WorkSamples = () => {
@@ -13,14 +10,6 @@ const WorkSamples = () => {
       <StyledSampleContainer>
         <StyledWorkImage src={image1} />
         <StyledWorkImage src={image2} />
-        <StyledWorkImage src={image3} />
-        <StyledWorkImage src={image4} />
-        <StyledWorkImage src={image5} />
-        <StyledWorkImage src={image2} />
-        <StyledWorkImage src={image3} />
-        <StyledWorkImage src={image1} />
-        <StyledWorkImage src={image5} />
-        <StyledWorkImage src={image4} />
       </StyledSampleContainer>
     </StyledContainer>
   );
