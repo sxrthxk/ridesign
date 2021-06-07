@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Services from "./components/Services";
 import WhoWeAre from "./components/WhoWeAre";
 import ContactUs from "./components/ContactUs";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
