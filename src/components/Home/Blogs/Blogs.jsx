@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledContainer } from "../UI";
+import { StyledContainer } from "../../UI";
 import BlogCard from "./BlogCard";
 
-import image from '../../assets/images/photo_2021-05-25_18-15-00.jpg'
-const title= "Blog Title"
+import image from '../../../assets/images/photo_2021-05-25_18-14-54.jpg'
+import { Link } from "react-router-dom";
+const title= "First Blog"
 
 const Blogs = () => {
   return (
     <StyledContainer>
       <StyledGrid>
-      <BlogCard image={image} title={title}/>
+      <Link to={`/blogs/${title}`}><BlogCard image={image} title={title}/></Link>
       <BlogCard />
       <BlogCard />
       <BlogCard />

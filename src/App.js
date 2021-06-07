@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import WhoWeAre from "./components/WhoWeAre";
 import ContactUs from "./components/ContactUs";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import BlogPage from "./components/Home/Blogs/BlogPage";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/services" children={Services} />
         <Route path="/who-we-are" children={WhoWeAre} />
         <Route path="/contact-us" children={ContactUs} />
+        <Route path="/blogs/:blogtitle"><BlogPage/></Route>
       </Switch>
       <Footer />
     </Router>

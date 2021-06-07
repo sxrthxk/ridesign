@@ -6,7 +6,6 @@ const BlogCard = ({title, image}) => {
             <StyledWrapper>
                 <StyledHero src={image}/>
                 <StyledTitle>{title}</StyledTitle>
-
             </StyledWrapper>
     )
 }
@@ -14,6 +13,8 @@ const BlogCard = ({title, image}) => {
 
 
 const StyledWrapper = styled.div`
+    overflow: hidden;
+    border-radius: 20px;
     background-color: white;
     width: auto;
     height: 160px;

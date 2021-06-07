@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const ServiceCard = ({ title, content }) => {
+const ServiceCard = ({ title, content,id }) => {
   return (
-    <StyledWrapper>
+    <StyledWrapper id={id}>
       <StyledTitle>{title}</StyledTitle>
       <StyledDescription>{content}</StyledDescription>
     </StyledWrapper>

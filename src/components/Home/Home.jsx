@@ -4,7 +4,7 @@ import WorkSamples from './WorkSamples'
 import BrandDesc from './BrandDesc'
 import ServicesHome from './ServicesHome'
 import OurBrands from './OurBrands'
-import Blogs from './Blogs'
+import Blogs from './Blogs/Blogs'
 
 const Home = () => {
     return (
