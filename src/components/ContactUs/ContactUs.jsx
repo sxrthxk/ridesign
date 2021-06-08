@@ -117,6 +117,7 @@ height: fit-content;
   }
   input,
   textarea {
+    font-family: 'roboto';
     width: auto;
     padding: 10px;
     margin: 20px;
