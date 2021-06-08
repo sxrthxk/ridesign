@@ -29,7 +29,7 @@ const Footer = () => {
           <Mail />
         </StyledLinks>
       </StyledContacts>
-      <StyledCopyright>© 2021 RiDesign. All Rights Reserved.</StyledCopyright>
+      <StyledCopyright>© 2021 ridesignMedia. All Rights Reserved.</StyledCopyright>
     </StyledWrapper>
   );
 };
@@ -39,6 +39,7 @@ const StyledWrapper = styled.div`
   width: 100%;
   margin: auto;
   padding: 50px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;

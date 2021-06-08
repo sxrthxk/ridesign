@@ -13,6 +13,7 @@ function App() {
   
   return (
     <Router>
+      <div className="root-div">
       <Navbar />
       <Switch>
         <Route path="/" children={Home} exact />
@@ -23,6 +24,7 @@ function App() {
         <Route path="/blogs/:blogtitle"><BlogPage/></Route>
       </Switch>
       <Footer />
+      </div>
     </Router>
   );
 }

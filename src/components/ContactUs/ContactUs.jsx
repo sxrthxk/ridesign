@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { StyledContainer, StyledHR } from "../UI";
 import { ReactComponent as Phone } from "../../assets/svg/contact-phone.svg";
-import { ReactComponent as Mail } from "../../assets/svg/contact-mail.svg";
+import { ReactComponent as Mail } from "../../assets/svg/email.svg";
 import { ReactComponent as Addr } from "../../assets/svg/contact-addr.svg";
 
 const ContactUs = () => {
@@ -49,7 +49,7 @@ const ContactUs = () => {
               rows="10"
               placeholder="Type your Message..."
             ></textarea>
-            <button type="submit">Click</button>
+            <button type="submit">Submit</button>
           </StyledForm>
         </StyledWrapper>
       </StyledContainer>
@@ -59,13 +59,15 @@ const ContactUs = () => {
 };
 
 const StyledWrapper = styled.div`
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   display: grid;
+  place-items: stretch;
   grid-template-columns: 1fr 1fr;
   @media only screen and (max-width: 600px) {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr; */
+    display: block;
   }
 `;
 
@@ -97,11 +99,14 @@ const StyledLinks = styled.ul`
     color: rgb(100,100,100);
   }
   @media only screen and (max-width: 600px) {
-    grid-column-end: 2;
+    li{
+      margin: 20px auto;
+    }
   }
 `;
 
 const StyledForm = styled.form`
+height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -130,6 +135,9 @@ const StyledForm = styled.form`
   }
   input:focus, textarea:focus{
     outline: none;
+  }
+  @media only screen and (max-width: 600px) {
+    margin: 0%;
   }
 `;
 

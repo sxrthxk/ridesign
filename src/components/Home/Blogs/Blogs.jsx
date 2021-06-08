@@ -4,14 +4,13 @@ import { StyledContainer } from "../../UI";
 import BlogCard from "./BlogCard";
 
 import image from '../../../assets/images/photo_2021-05-25_18-14-54.jpg'
-import { Link } from "react-router-dom";
 const title= "First Blog"
 
 const Blogs = () => {
   return (
     <StyledContainer>
       <StyledGrid>
-      <Link to={`/blogs/${title}`}><BlogCard image={image} title={title}/></Link>
+      <BlogCard image={image} title={title}/>
       <BlogCard />
       <BlogCard />
       <BlogCard />
@@ -23,7 +22,9 @@ const Blogs = () => {
 
 const StyledGrid = styled.div`
 width: 100%;
+margin: 20px;
     display: grid;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     @media only screen and (max-width: 600px) {
       display: block;
