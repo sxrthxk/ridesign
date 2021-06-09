@@ -2,6 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import image1 from "../../assets/images/image1.jpg";
 import image2 from "../../assets/images/photo_2021-05-25_18-14-47.jpg";
+import image3 from '../../assets/images/92055245544.jpg'
+import image4 from '../../assets/images/84345632432.jpg'
+import image5 from '../../assets/images/point61 meme1 (1).jpg'
+import image6 from '../../assets/images/Vishal Mishra song 1.jpg'
+import image7 from '../../assets/images/585318734095.jpg'
+import image8 from '../../assets/images/3503641738.jpg'
 import { StyledContainer } from "../UI";
 
 const WorkSamples = () => {
@@ -10,6 +16,12 @@ const WorkSamples = () => {
       <StyledSampleContainer>
         <StyledWorkImage src={image1} />
         <StyledWorkImage src={image2} />
+        <StyledWorkImage src={image3} />
+        <StyledWorkImage src={image4} />
+        <StyledWorkImage src={image5} />
+        <StyledWorkImage src={image6} />
+        <StyledWorkImage src={image7} />
+        <StyledWorkImage src={image8} />
       </StyledSampleContainer>
     </StyledContainer>
   );

@@ -1,19 +1,21 @@
 import React from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import styled from "styled-components";
 import { StyledContainer, StyledHR } from "../UI";
-import { ReactComponent as Phone } from "../../assets/svg/contact-phone.svg";
-import { ReactComponent as Mail } from "../../assets/svg/email.svg";
-import { ReactComponent as Addr } from "../../assets/svg/contact-addr.svg";
 
 const ContactUs = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log("submitted");
   };
+
+  function recaptchaHandler () {
+    console.log("Recap done")
+  }
   return (
     <>
       <StyledContainer>
-        <StyledWrapper>
+        {/* <StyledWrapper>
           <StyledLinks>
             <div>
             <li>
@@ -38,9 +40,10 @@ const ContactUs = () => {
               </div>
             </li>
             </div>
-          </StyledLinks>
+          </StyledLinks> */}
           <StyledForm onSubmit={submitHandler}>
             <h1>Reach Out to Us!</h1>
+            <div>
             <input type="text" name="username" placeholder="Full Name" />
             <input type="email" name="email" placeholder="Email Address" />
             <textarea
@@ -50,73 +53,76 @@ const ContactUs = () => {
               placeholder="Type your Message..."
             ></textarea>
             <button type="submit">Submit</button>
+            </div>
+            <ReCAPTCHA sitekey="6Le6LyAbAAAAAIq96mAWrgMZFe0W3SAlzPwF6Ybz" onChange={recaptchaHandler}/>
           </StyledForm>
-        </StyledWrapper>
+        {/* </StyledWrapper> */}
       </StyledContainer>
       <StyledHR />
     </>
   );
 };
 
-const StyledWrapper = styled.div`
-  /* height: 100%; */
-  width: 100%;
-  display: grid;
-  place-items: stretch;
-  grid-template-columns: 1fr 1fr;
-  @media only screen and (max-width: 600px) {
-    /* grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr; */
-    display: block;
-  }
-`;
+// const StyledWrapper = styled.div`
+//   /* height: 100%; */
+//   width: 100%;
+//   display: grid;
+//   place-items: stretch;
+//   grid-template-columns: 1fr 1fr;
+//   @media only screen and (max-width: 600px) {
+//     /* grid-template-rows: 1fr 1fr;
+//     grid-template-columns: 1fr; */
+//     display: block;
+//   }
+// `;
 
-const StyledLinks = styled.ul`
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  li {
-    color: white;
-    margin: 40px;
-    height: max-content;
-    display: flex;
-    align-items: center;
+// const StyledLinks = styled.ul`
+//   margin: 20px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   list-style: none;
+//   li {
+//     color: white;
+//     margin: 40px;
+//     height: max-content;
+//     display: flex;
+//     align-items: center;
 
-  }
-  li > svg{
-    fill: white;
-    height: 2rem;
-    width: 2rem;
-    margin: 10px;
-  }
-  li > div {
-    margin: 10px;
-  }
-  li> div > p {
-    color: rgb(100,100,100);
-  }
-  @media only screen and (max-width: 600px) {
-    li{
-      margin: 20px auto;
-    }
-  }
-`;
+//   }
+//   li > svg{
+//     fill: white;
+//     height: 2rem;
+//     width: 2rem;
+//     margin: 10px;
+//   }
+//   li > div {
+//     margin: 10px;
+//   }
+//   li> div > p {
+//     color: rgb(100,100,100);
+//   }
+//   @media only screen and (max-width: 600px) {
+//     li{
+//       margin: 20px auto;
+//     }
+//   }
+// `;
 
 const StyledForm = styled.form`
+width: 100%;
 height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   margin: 20px;
-  background-color: white;
+  background-color: #b6b6b6;
   h1 {
     margin: 20px;
   }
   input,
   textarea {
+    height: min-content;
     font-family: 'roboto';
     width: auto;
     padding: 10px;

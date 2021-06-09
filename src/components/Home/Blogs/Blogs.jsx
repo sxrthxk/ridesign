@@ -3,21 +3,16 @@ import styled from "styled-components";
 import { StyledContainer } from "../../UI";
 import BlogCard from "./BlogCard";
 
-import image from '../../../assets/images/photo_2021-05-25_18-14-54.jpg'
+const Blogs = ({posts}) => {
 
-const title= "First Blog"
-
-const Blogs = (posts) => {
-
-  
   return (
     <StyledContainer>
       <StyledGrid>
-      <BlogCard image={image} title={title}/>
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
-      <BlogCard />
+      {posts.length ? (
+        posts.map((post) => 
+          <BlogCard key={post.sys.id} title={post.fields.title} image={post.fields.hero.fields.file.url}/>
+        )
+      ) : null}
       </StyledGrid>
     </StyledContainer>
   );

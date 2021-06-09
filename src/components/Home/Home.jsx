@@ -6,14 +6,14 @@ import ServicesHome from './ServicesHome'
 import OurBrands from './OurBrands'
 import Blogs from './Blogs/Blogs'
 
-const Home = ({posts}) => {
+const Home = ({posts, blogAvailable}) => {
     return (
         <>
         <WorkSamples/>
         <BrandDesc/>
         <ServicesHome/>
         <OurBrands/>
-        <Blogs posts={posts}/>
+        <Blogs posts={posts} blogAvailable={blogAvailable}/>
         <StyledHR/>
         </>
     )

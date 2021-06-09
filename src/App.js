@@ -12,12 +12,13 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [posts, setPosts] = useState([]);
-  // useEffect(() => {
-  //   client
-  //     .getEntries()
-  //     .then((response) => setPosts(response.items))
-  //     .catch(console.error);
-  // }, []);
+  const [blogAvailable, setBlogAvailable] = useState(false)
+  useEffect(() => {
+    client
+      .getEntries()
+      .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
+      .catch(console.error);
+  }, []);
   return (
     <Router>
       <div className="root-div">
@@ -26,12 +27,12 @@ function App() {
           <Route path="/" exact>
             <Home posts={posts} />
           </Route>
-          <Route path="/ridesign" children={Home} exact />
+          <Route path="/ridesign"exact><Home posts={posts} blogAvailable={blogAvailable}/></Route>
           <Route path="/services" children={Services} />
           <Route path="/who-we-are" children={WhoWeAre} />
           <Route path="/contact-us" children={ContactUs} />
           <Route path="/blogs/:blogtitle">
-            <BlogPage />
+            <BlogPage/>
           </Route>
         </Switch>
         <Footer />

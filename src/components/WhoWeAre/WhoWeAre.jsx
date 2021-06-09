@@ -60,11 +60,6 @@ grid-template-columns: repeat(auto-fill, minmax(200px, 240px));
   margin: 20px;
 `;
 
-const StyledCardWrapper = styled.div`
-width: max-content;
-  display: flex;
-  flex-wrap: wrap;
 
-`;
 
 export default WhoWeAre;
