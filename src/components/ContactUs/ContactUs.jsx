@@ -9,8 +9,8 @@ const ContactUs = () => {
     console.log("submitted");
   };
 
-  function recaptchaHandler () {
-    console.log("Recap done")
+  function recaptchaHandler() {
+    console.log("Recap done");
   }
   return (
     <>
@@ -41,21 +41,60 @@ const ContactUs = () => {
             </li>
             </div>
           </StyledLinks> */}
-          <StyledForm onSubmit={submitHandler}>
-            <h1>Reach Out to Us!</h1>
-            <div>
-            <input type="text" name="username" placeholder="Full Name" />
+        <StyledForm onSubmit={submitHandler}>
+          <h1>Reach Out to Us!</h1>
+          <div>
+            <input type="text" name="fname" placeholder="First Name" />
+            <input type="text" name="lname" placeholder="Last Name" />
             <input type="email" name="email" placeholder="Email Address" />
-            <textarea
-              name="text"
-              cols="30"
-              rows="10"
-              placeholder="Type your Message..."
-            ></textarea>
-            <button type="submit">Submit</button>
+            <input type="tel" name="pnumber" placeholder="Phone Number" />
+            <input type="text" name="company-name" placeholder="Company Name" />
+            <select value="op1">
+              <option value="op1" disabled>
+                Budget
+              </option>
+              <option value="op2">Option 2</option>
+            </select>
+            <select value="op1">
+              <option value="op1" disabled>
+                Starting Time
+              </option>
+              <option value="op2">Option 2</option>
+            </select>
+            <h1>Services Needed</h1>
+            <br />
+            <div className="checkboxes">
+              <label>
+                <input type="checkbox" name="meme-marketing" />
+                Meme Marketing
+              </label>
+              <label>
+                <input type="checkbox" name="meme-marketing" />
+                Meme Marketing
+              </label>
+              <label>
+                <input type="checkbox" name="meme-marketing" />
+                Meme Marketing
+              </label>
+              <label>
+                <input type="checkbox" name="meme-marketing" />
+                Meme Marketing
+              </label>
+              <label>
+                <input type="checkbox" name="meme-marketing" />
+                Meme Marketing
+              </label>
+              <label>
+                <input type="checkbox" name="meme-marketing" />
+                Meme Marketing
+              </label>
             </div>
-            <ReCAPTCHA sitekey="6Le6LyAbAAAAAIq96mAWrgMZFe0W3SAlzPwF6Ybz" onChange={recaptchaHandler}/>
-          </StyledForm>
+            
+              <textarea></textarea>
+            <button type="submit">Submit</button>
+          </div>
+          {/* <ReCAPTCHA sitekey="6Le6LyAbAAAAAIq96mAWrgMZFe0W3SAlzPwF6Ybz" onChange={recaptchaHandler}/> */}
+        </StyledForm>
         {/* </StyledWrapper> */}
       </StyledContainer>
       <StyledHR />
@@ -111,19 +150,35 @@ const ContactUs = () => {
 // `;
 
 const StyledForm = styled.form`
-width: 100%;
-height: fit-content;
+  width: 100%;
+  height: fit-content;
   display: flex;
+  align-items: center;
   flex-direction: column;
   margin: 20px;
   background-color: #b6b6b6;
   h1 {
     margin: 20px;
   }
+  input:nth-child(5) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .checkboxes{
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  textarea{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+  }
   input,
-  textarea {
+  select {
     height: min-content;
-    font-family: 'roboto';
+    font-family: "roboto";
     width: auto;
     padding: 10px;
     margin: 20px;
@@ -140,8 +195,13 @@ height: fit-content;
     background-color: black;
     border-radius: 10px;
   }
-  input:focus, textarea:focus{
+  input:focus,
+  textarea:focus {
     outline: none;
+  }
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   @media only screen and (max-width: 600px) {
     margin: 0%;

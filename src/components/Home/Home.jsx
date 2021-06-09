@@ -13,7 +13,7 @@ const Home = ({posts, blogAvailable}) => {
         <BrandDesc/>
         <ServicesHome/>
         <OurBrands/>
-        <Blogs posts={posts} blogAvailable={blogAvailable}/>
+        {/* <Blogs posts={posts} blogAvailable={blogAvailable}/> */}
         <StyledHR/>
         </>
     )

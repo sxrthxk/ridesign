@@ -13,12 +13,12 @@ import { useState, useEffect } from "react";
 function App() {
   const [posts, setPosts] = useState([]);
   const [blogAvailable, setBlogAvailable] = useState(false)
-  useEffect(() => {
-    client
-      .getEntries()
-      .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
-      .catch(console.error);
-  }, []);
+  // useEffect(() => {
+  //   client
+  //     .getEntries()
+  //     .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
+  //     .catch(console.error);
+  // }, []);
   return (
     <Router>
       <div className="root-div">

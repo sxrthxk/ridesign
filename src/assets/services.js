@@ -39,6 +39,12 @@ const ServicesObject = [
         "Users consume huge quantities of memes on daily basis; hence, memes make a great way by which marketers can catch and keep audience’s attention. They have become the latest weapon for marketers because of its ability to communicate the story without the use of many words and their ability to spread fast throughout the internet like forest fires. Memes reach and connect with audience beyond the conventional methods. Being cost effective, easy to create and offering a good ROI, meme marketing has given the much-needed glow up to advertising, bringing about a revolution in digital marketing.",
     },
     { title: "Camapaign Creation", content: "" },
+    {
+      id: "web-dev",
+      title: "Web Development/Design",
+      content: "Web Design and Development"
+
+    }
   ];
 
   export default ServicesObject;
