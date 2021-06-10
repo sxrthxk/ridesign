@@ -10,15 +10,17 @@ import BlogPage from "./components/Home/Blogs/BlogPage";
 import client from "./clients";
 import { useState, useEffect } from "react";
 
+
 function App() {
-  const [posts, setPosts] = useState([]);
+  const posts = []
+  // const [posts, setPosts] = useState([]);
   const [blogAvailable, setBlogAvailable] = useState(false)
-  useEffect(() => {
-    client
-      .getEntries()
-      .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
-      .catch(console.error);
-  }, []);
+  // useEffect(() => {
+  //   client
+  //     .getEntries()
+  //     .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
+  //     .catch(console.error);
+  // }, []);
   return (
     <Router>
       <div className="root-div">
@@ -30,7 +32,7 @@ function App() {
           <Route path="/ridesign"exact><Home posts={posts} blogAvailable={blogAvailable}/></Route>
           <Route path="/services" children={Services} />
           <Route path="/who-we-are" children={WhoWeAre} />
-          <Route path="/contact-us" children={ContactUs} />
+          <Route path="/contact-us"><ContactUs/></Route>
           <Route path="/blogs/:blogtitle">
             <BlogPage/>
           </Route>

@@ -1,46 +1,26 @@
-import React from "react";
+import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import styled from "styled-components";
+import Services from '../../assets/services'
 import { StyledContainer, StyledHR } from "../UI";
 
 const ContactUs = () => {
+
+  const [submitEnabled, setSubmitEnabled] = useState(false);
+  
   const submitHandler = (e) => {
     e.preventDefault();
     console.log("submitted");
   };
+  
 
   function recaptchaHandler() {
     console.log("Recap done");
+    setSubmitEnabled(true);
   }
   return (
     <>
       <StyledContainer>
-        {/* <StyledWrapper>
-          <StyledLinks>
-            <div>
-            <li>
-              <Phone />
-              <div>
-                <h2>Contact Number</h2>
-                <p>+0123456789</p>
-              </div>
-            </li>
-            <li>
-              <Mail />
-              <div>
-                <h2>Email</h2>
-                <p>+0123456789</p>
-              </div>
-            </li>
-            <li>
-              <Addr />
-              <div>
-                <h2>Address</h2>
-                <p>+0123456789</p>
-              </div>
-            </li>
-            </div>
-          </StyledLinks> */}
         <StyledForm onSubmit={submitHandler}>
           <h1>Reach Out to Us!</h1>
           <div>
@@ -64,36 +44,19 @@ const ContactUs = () => {
             <h1>Services Needed</h1>
             <br />
             <div className="checkboxes">
+              {Services.map(service => 
               <label>
-                <input type="checkbox" name="meme-marketing" />
-                Meme Marketing
-              </label>
-              <label>
-                <input type="checkbox" name="meme-marketing" />
-                Meme Marketing
-              </label>
-              <label>
-                <input type="checkbox" name="meme-marketing" />
-                Meme Marketing
-              </label>
-              <label>
-                <input type="checkbox" name="meme-marketing" />
-                Meme Marketing
-              </label>
-              <label>
-                <input type="checkbox" name="meme-marketing" />
-                Meme Marketing
-              </label>
-              <label>
-                <input type="checkbox" name="meme-marketing" />
-                Meme Marketing
-              </label>
+                <input type="checkbox" name={service.id} />
+               {service.title}
+              </label>)
+              
+             }
             </div>
             
-              <textarea></textarea>
-            <button type="submit">Submit</button>
+              <textarea placeholder="Details (Optional)"></textarea>
           </div>
-          {/* <ReCAPTCHA sitekey="6Le6LyAbAAAAAIq96mAWrgMZFe0W3SAlzPwF6Ybz" onChange={recaptchaHandler}/> */}
+          <StyledReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={recaptchaHandler}/>
+            <button type="submit" disabled={!submitEnabled}>Submit Form</button>
         </StyledForm>
         {/* </StyledWrapper> */}
       </StyledContainer>
@@ -102,52 +65,10 @@ const ContactUs = () => {
   );
 };
 
-// const StyledWrapper = styled.div`
-//   /* height: 100%; */
-//   width: 100%;
-//   display: grid;
-//   place-items: stretch;
-//   grid-template-columns: 1fr 1fr;
-//   @media only screen and (max-width: 600px) {
-//     /* grid-template-rows: 1fr 1fr;
-//     grid-template-columns: 1fr; */
-//     display: block;
-//   }
-// `;
-
-// const StyledLinks = styled.ul`
-//   margin: 20px;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   list-style: none;
-//   li {
-//     color: white;
-//     margin: 40px;
-//     height: max-content;
-//     display: flex;
-//     align-items: center;
-
-//   }
-//   li > svg{
-//     fill: white;
-//     height: 2rem;
-//     width: 2rem;
-//     margin: 10px;
-//   }
-//   li > div {
-//     margin: 10px;
-//   }
-//   li> div > p {
-//     color: rgb(100,100,100);
-//   }
-//   @media only screen and (max-width: 600px) {
-//     li{
-//       margin: 20px auto;
-//     }
-//   }
-// `;
+const StyledReCAPTCHA = styled(ReCAPTCHA)`
+  margin: 20px;
+  width: min-content;
+`;
 
 const StyledForm = styled.form`
   width: 100%;
@@ -159,6 +80,10 @@ const StyledForm = styled.form`
   background-color: #b6b6b6;
   h1 {
     margin: 20px;
+  }
+  label > input{
+    width: 1rem;
+    height: 1rem;
   }
   input:nth-child(5) {
     grid-column-start: 1;
@@ -176,6 +101,7 @@ const StyledForm = styled.form`
     width: 100%;
   }
   input,
+  textarea,
   select {
     height: min-content;
     font-family: "roboto";
@@ -188,13 +114,24 @@ const StyledForm = styled.form`
   }
   button {
     width: auto;
-    padding: 10px;
+    padding: 20px;
     margin: 20px;
     border: none;
     color: white;
     background-color: black;
     border-radius: 10px;
+    cursor: pointer;
+    /* width: 20rem; */
+    /* height: 5rem; */
+    font-size: 1.2rem;
+    transition: all 0.5s ease-in;
+    &:disabled{
+      cursor: auto;
+    background-color: gray;
+    text-decoration: line-through;
+    }
   }
+    
   input:focus,
   textarea:focus {
     outline: none;
@@ -202,9 +139,16 @@ const StyledForm = styled.form`
   div {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+
+  }
   }
   @media only screen and (max-width: 600px) {
     margin: 0%;
+    div{
+      }
   }
 `;
 
