@@ -5,13 +5,18 @@ import Brands from "../../../assets/models/BrandsModel";
 import { motion } from "framer-motion";
 import { ReactComponent as Instagram } from "../../../assets/svg/instagram.svg";
 import { ReactComponent as Youtube } from "../../../assets/svg/youtube-color.svg";
+import { ReactComponent as Cross } from "../../../assets/svg/xLight.svg";
 import { useState } from "react";
 import axios from "axios";
 
 const BrandModal = ({ index, modalClose }) => {
   const brand = Brands[index];
-
-  const [loading, setLoading] = useState(true)
+  console.log(index);
+  var fontSize = "2rem";
+  if (index === 4) {
+    fontSize = "1.5rem";
+  }
+  const [loading, setLoading] = useState(true);
 
   const [followers, setFollowers] = useState();
   useEffect(() => {
@@ -22,12 +27,13 @@ const BrandModal = ({ index, modalClose }) => {
       .then((res) => {
         // console.log(res.data.data.followers);
         setFollowers(res.data.data.followers);
-        
+
         console.log(followers);
-      }).then(() => {
+      })
+      .then(() => {
         setLoading(false);
-      }
-      ).catch(console.error);
+      })
+      .catch(console.error);
   }, [followers, brand.igHandle]);
   return (
     <>
@@ -44,14 +50,21 @@ const BrandModal = ({ index, modalClose }) => {
           exit={{ opacity: 0 }}
         >
           <StyledBody>
+            <StyledCross onClick={modalClose} />
             <StyledShowcase src={brand.showcase} />
             <StyledInfo>
               <StyledAvatar src={brand.avatar}></StyledAvatar>
-              <StyledTitle>{brand.title}</StyledTitle>
+              <StyledTitle fontSize={fontSize}>{brand.title}</StyledTitle>
               <StyledInstagramWrapper>
-                <StyledInstagram />
+                <a target="__blank" href={`https://www.instagram.com/${brand.igHandle}/`}>
+                  <StyledInstagram />
+                </a>
                 <h2>
-                  {loading ? <p style={{color: 'rgba(255,255,255, 0.5)'}}>Loading</p> : followers}
+                  {loading ? (
+                    <p style={{ color: "rgba(255,255,255, 0.5)" }}>Loading</p>
+                  ) : (
+                    followers
+                  )}
                   <p>Followers</p>
                 </h2>
               </StyledInstagramWrapper>
@@ -59,12 +72,13 @@ const BrandModal = ({ index, modalClose }) => {
             </StyledInfo>
             <StyledInsights src={brand.showcase} />
           </StyledBody>
-            <StyledDescription>
-              {brand.description && brand.description}
-            </StyledDescription>
+          <StyledDescription>
+            {brand.description && brand.description}
+          </StyledDescription>
           <StyledFooter>
             <p>
-            If you want to promote your brand on <strong>@{brand.title}</strong>, then click here. 
+              If you want to promote your brand on{" "}
+              <strong>@{brand.title}</strong>, then click here.
             </p>
           </StyledFooter>
         </StyledModal>,
@@ -74,6 +88,16 @@ const BrandModal = ({ index, modalClose }) => {
   );
 };
 
+const StyledCross = styled(Cross)`
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1.2rem;
+  cursor: pointer;
+`;
+
 const StyledInfo = styled.div`
   display: flex;
   flex-direction: column;
@@ -82,14 +106,11 @@ const StyledInfo = styled.div`
 
 const StyledInstagram = styled(Instagram)`
   fill: white;
-  width: 3rem;
-  height: min-content;
-  margin: 0px 10px;
+
   h2 {
     display: flex;
     flex-direction: column;
   }
-   
 `;
 
 const StyledInstagramWrapper = styled.div`
@@ -99,6 +120,26 @@ const StyledInstagramWrapper = styled.div`
   padding: 10px;
   align-items: center;
   justify-content: space-between;
+  a {
+    width: 3rem;
+    height: 3rem;
+    margin: 0px 10px;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    a {
+      width: 2rem;
+      margin: 0 1.5rem;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
   h2 {
     display: flex;
     flex-direction: column;
@@ -127,10 +168,10 @@ const StyledAvatar = styled.img`
 `;
 
 const StyledTitle = styled.h1`
-margin: 1rem 0;
+  margin: 1rem 0;
   font-size: 3rem;
   @media only screen and (max-width: 600px) {
-    font-size: 2.5rem;
+    font-size: ${(p) => p.fontSize};
     margin: 0;
   }
 `;
@@ -143,7 +184,7 @@ const StyledBody = styled.div`
   box-sizing: border-box;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
-    margin: 2rem;
+    margin-top: 1rem;
   }
 `;
 
@@ -176,18 +217,18 @@ const StyledDescription = styled.div`
 `;
 
 const StyledFooter = styled.div`
-cursor: pointer;
+  cursor: pointer;
   width: 100%;
   display: block;
-  background-color: #25D366;
+  background-color: #25d366;
   display: flex;
   justify-content: center;
   p {
     color: black;
-    margin: 0.5rem
+    margin: 0.5rem;
   }
   strong {
-    color: black
+    color: black;
   }
   font-size: 1rem;
 `;
@@ -221,6 +262,9 @@ const StyledModal = styled(motion.div)`
   transform: translate(-50%, -50%);
   * {
     color: white;
+  }
+  @media only screen and (max-width: 786px) {
+    width: 90%;
   }
 `;
 

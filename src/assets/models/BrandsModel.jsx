@@ -56,7 +56,7 @@ const Brands = [
     igHandle: "hindustanstockupdates",
     avatar: hindustanstockupdates,
     showcase: hindustanstockupdatesshow,
-    description: `Owning stocks can diversify how you earn returns on your money. Maybe you've got some money in your company's retirement plan, or saved in a bank account, or invested in CDs, or something else. Stocks can be another type of investment, diversifying against potential trouble in any one area.
+    description: `Owning stocks can diversify how you earn returns on your money. Maybe you've got some money in your company's retirement plan, or saved in a bank account, or invested in CDs, or something else. 
 
     Also you might have heard that investing in stocks is risky sometimes so therefore to overcome this risk you should checkout our brand page Hindustan stock updates which will help you to overcome risk as we provide genuine information on our page, which will help you to generate maximum profits.`
   },

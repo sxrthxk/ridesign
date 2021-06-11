@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import styled from "styled-components";
-import Services from '../../assets/services'
+import Services from '../../assets/models/Services'
 import { StyledContainer, StyledHR } from "../UI";
 
 const ContactUs = () => {

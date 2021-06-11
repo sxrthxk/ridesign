@@ -1,15 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 
-const ServiceCard = ({ title, content,id }) => {
+const ServiceCard = ({ title, content, id, serviceImage }) => {
   return (
-    <StyledWrapper>
-      <span id={id}></span>
-      <StyledTitle>{title}</StyledTitle>
-      <StyledDescription>{content}</StyledDescription>
-    </StyledWrapper>
+    <StyledCard>
+      <StyledImage src={serviceImage}></StyledImage>
+      <StyledWrapper>
+        <span id={id}></span>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledDescription>{content}</StyledDescription>
+      </StyledWrapper>
+    </StyledCard>
   );
 };
+
+const StyledCard = styled.div`
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  box-shadow: -2px -2px 2px #27272792;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 786px) {
+    flex-direction: column;
+    &:nth-child(odd) {
+      flex-direction: column;
+    }
+  }
+`;
+
+const StyledImage = styled.img`
+  margin: 50px auto;
+  width: 50%;
+  height: 100%;
+  @media only screen and (max-width: 786px) {
+    width: 90%;
+    margin: 30px auto;
+  }
+`;
 
 const StyledWrapper = styled.div`
   height: 100%;
@@ -17,7 +45,6 @@ const StyledWrapper = styled.div`
   box-sizing: border-box;
   margin: 20px auto;
   padding: 20px;
-  box-shadow: -2px -2px 2px #27272792;
   position: relative;
   /* &:before{
     display: block;
@@ -27,7 +54,7 @@ const StyledWrapper = styled.div`
     visibility: hidden;
     pointer-events: none;
   } */
-  span{
+  span {
     position: absolute;
     top: -148px;
   }

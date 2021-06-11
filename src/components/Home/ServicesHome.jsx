@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledContainer } from "../UI";
 
-import ServicesObject from "../../assets/services";
+import ServicesObject from "../../assets/models/Services";
 import styled from "styled-components";
 import { HashLink } from "react-router-hash-link";
 
