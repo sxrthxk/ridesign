@@ -59,10 +59,13 @@ const BrandModal = ({ index, modalClose }) => {
             </StyledInfo>
             <StyledInsights src={brand.showcase} />
           </StyledBody>
-          <StyledFooter>
             <StyledDescription>
               {brand.description && brand.description}
             </StyledDescription>
+          <StyledFooter>
+            <p>
+            If you want to promote your brand on <strong>@{brand.title}</strong>, then click here. 
+            </p>
           </StyledFooter>
         </StyledModal>,
         document.getElementById("modal")
@@ -172,9 +175,21 @@ const StyledDescription = styled.div`
   }
 `;
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled.div`
+cursor: pointer;
   width: 100%;
-  /* height: 2rem; */
+  display: block;
+  background-color: #25D366;
+  display: flex;
+  justify-content: center;
+  p {
+    color: black;
+    margin: 0.5rem
+  }
+  strong {
+    color: black
+  }
+  font-size: 1rem;
 `;
 
 const StyledOverlay = styled(motion.div)`
@@ -198,6 +213,7 @@ const StyledModal = styled(motion.div)`
   background-color: black;
   border-radius: 20px;
   /* padding: 50px; */
+  overflow: hidden;
   z-index: 1001;
   position: fixed;
   top: 50%;

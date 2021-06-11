@@ -73,6 +73,9 @@ const Brands = [
     igHandle: "cryptoaxe",
     avatar: cryptoaxe,
     showcase: cryptoaxeshow,
+    description: `One the most trending topics over the globe currently is Cryptocurrency. What is Cryptocurrencies ? How does it work ? So basically Cryptocurrencies are digital form money and they work on blockchain technology. Also you might have heard about Bitcoin or etherium from your friends or known ones.
+
+    Cryptoaxe helps their audience to know more about Cryptocurrencies. And also we post daily updates regarding trending coins. Although if you want know the top coins which will be making thousand percent profit in upcoming days then must checkout our brand page.`
   },
   {
     id: 8,
