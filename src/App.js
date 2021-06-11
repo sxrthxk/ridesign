@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Services from "./components/Services";
-import WhoWeAre from "./components/WhoWeAre";
+import AboutUs from './components/AboutUs'
 import ContactUs from "./components/ContactUs";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BlogPage from "./components/Home/Blogs/BlogPage";
@@ -45,7 +45,7 @@ function App() {
             />
           </Route>
           <Route path="/services" children={Services} />
-          <Route path="/who-we-are" children={WhoWeAre} />
+          <Route path="/about-us" children={AboutUs} />
           <Route path="/contact-us">
             <ContactUs />
           </Route>

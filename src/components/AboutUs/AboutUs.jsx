@@ -4,7 +4,7 @@ import { StyledContainer, StyledHR } from "../UI";
 import LogoVid from "../../assets/videos/logo-anim.mp4";
 import OurJourney from "./OurJourney";
 
-const WhoWeAre = () => {
+const AboutUs = () => {
   return (
     <>
       <StyledContainer>
@@ -136,4 +136,4 @@ const StyledOurTeamWrapper = styled.h2`
   }
 `;
 
-export default WhoWeAre;
+export default AboutUs;

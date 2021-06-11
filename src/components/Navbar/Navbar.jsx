@@ -34,8 +34,8 @@ const Navbar = () => {
             <StyledLink onClick={toggleAccordion} to="/services">
               services
             </StyledLink>
-            <StyledLink onClick={toggleAccordion} to="/who-we-are">
-              who we are
+            <StyledLink onClick={toggleAccordion} to="/about-us">
+              about us
             </StyledLink>
             <StyledLink onClick={toggleAccordion} to="contact-us">
               contact us
