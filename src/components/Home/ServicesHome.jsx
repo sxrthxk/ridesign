@@ -11,7 +11,7 @@ const ServicesHome = () => {
       <StyledWrapper>
         {ServicesObject.map((service) => {
           return (
-            <StyledTitle key={service.id}>
+            <StyledTitle key={service.key}>
               <HashLink to={`/services#${service.id}`}>
                 {service.title}
               </HashLink>

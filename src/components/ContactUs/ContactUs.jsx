@@ -6,11 +6,11 @@ import { StyledContainer, StyledHR } from "../UI";
 
 const ContactUs = () => {
 
-  const [submitEnabled, setSubmitEnabled] = useState(false);
+  const [submitEnabled, setSubmitEnabled] = useState(true);
   
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("submitted");
+    console.log(e);
   };
   
 
@@ -29,14 +29,14 @@ const ContactUs = () => {
             <input type="email" name="email" placeholder="Email Address" />
             <input type="tel" name="pnumber" placeholder="Phone Number" />
             <input type="text" name="company-name" placeholder="Company Name" />
-            <select value="op1">
-              <option value="op1" disabled>
+            <select defaultValue="">
+              <option value="" disabled>
                 Budget
               </option>
               <option value="op2">Option 2</option>
             </select>
-            <select value="op1">
-              <option value="op1" disabled>
+            <select defaultValue="">
+              <option value="" disabled>
                 Starting Time
               </option>
               <option value="op2">Option 2</option>
@@ -45,7 +45,7 @@ const ContactUs = () => {
             <br />
             <div className="checkboxes">
               {Services.map(service => 
-              <label>
+              <label key={service.key}>
                 <input type="checkbox" name={service.id} />
                {service.title}
               </label>)

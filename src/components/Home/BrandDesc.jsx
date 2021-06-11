@@ -6,7 +6,7 @@ const BrandDesc = () => {
   return (
     <StyledContainer style={{ color: "white" }}>
       <StyledDescription>
-      Our agency is an explainer video company headquartered in Dewas, India. Our team of young enthusiasts specializes in video production. Our clients are from every category of niche that you can find on social media. Our company bet provide include advertising & marketing, business services, and consumer products & services with the help of video creation
+      Ridesignmedia, a social media agency based in Dewas, Madhya Pradesh. Our agency helps clients by providing different services with 100% customer satisfaction. We have worked with more than 300+ million base on Instagram as well as on social media platforms. Our agency have helped more than hundred of brands to sustain their digital buisness. By bringing them quality leads which later on converted as their permanent clients respectively. Although we have been working with international brands for their branding and acquiring online sales with our super powerful strategies. The services we provide are logo creation, Instagram growth, Instagram account management, YouTube channel management and growth , branding and many more as we have professionals in our staff for several niches. The agency have been working for more than six years in the market that’s what the reason we are famous all over the globe.
       </StyledDescription>
     </StyledContainer>
   );

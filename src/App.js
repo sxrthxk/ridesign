@@ -10,15 +10,25 @@ import BlogPage from "./components/Home/Blogs/BlogPage";
 import client from "./clients";
 import { useState, useEffect } from "react";
 
-
 function App() {
-  const [posts, setPosts] = useState([]);
-  const [blogAvailable, setBlogAvailable] = useState(false)
+  const posts = [];
+  // const [posts, setPosts] = useState([]);
+  const [blogAvailable, setBlogAvailable] = useState(false);
+  // useEffect(() => {
+  //   client
+  //     .getEntries()
+  //     .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
+  //     .catch(console.error);
+  // }, []);
+  const loadHandler = () => {
+    console.log("loaded");
+  };
+
   useEffect(() => {
-    client
-      .getEntries()
-      .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
-      .catch(console.error);
+    window.addEventListener("load", loadHandler);
+    return () => {
+      window.removeEventListener("load", loadHandler);
+    };
   }, []);
   return (
     <Router>
@@ -28,12 +38,19 @@ function App() {
           <Route path="/" exact>
             <Home posts={posts} />
           </Route>
-          <Route path="/ridesign"exact><Home posts={posts} blogAvailable={blogAvailable}/></Route>
+          <Route path="/ridesign" exact>
+            <Home
+              posts={posts}
+              blogAvailable={blogAvailable}
+            />
+          </Route>
           <Route path="/services" children={Services} />
           <Route path="/who-we-are" children={WhoWeAre} />
-          <Route path="/contact-us"><ContactUs/></Route>
+          <Route path="/contact-us">
+            <ContactUs />
+          </Route>
           <Route path="/blogs/:blogtitle">
-            <BlogPage/>
+            <BlogPage />
           </Route>
         </Switch>
         <Footer />

@@ -10,7 +10,7 @@ const Services = () => {
     <>
       <StyledContainer style={{ color: "white" }}>
         {ServicesObject.map((service) => (
-          <ServiceCard title={service.title} content={service.content} id={service.id}/>
+          <ServiceCard key={service.key} title={service.title} content={service.content} id={service.id}/>
         ))}
       </StyledContainer>
       <StyledHR />

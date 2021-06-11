@@ -2,12 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
+    />
     <meta name="theme-color" content="#000000" />
     <meta name="RiDesign" content="RiDesignMedia" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="apple-touch-icon"
@@ -34,17 +40,34 @@
     <title>ridesignMedia</title>
 
     <style>
-      .loader{
+      @keyframes anim {
+        0% {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+      .page-loader-animation {
+        height: 5rem;
+        width: 5rem;
+        animation: anim 2s ease-in-out infinite;
+      }
+
+      .page-loader-div{
         height: 100vh;
         width: 100vw;
         display: flex;
-        align-items: center;
         justify-content: center;
-        font-size: large;
-        color: white;
-        font-family: 'coolvetica', 'roboto';
+        align-items: center;
       }
-      html{
+      html {
         background-color: black;
       }
     </style>
@@ -53,10 +76,23 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <header id="header"></header>
     <div id="root">
-      <!-- <div class="loader">Loading</div> -->
+      <div class="page-loader-div">
+      <svg
+      class="page-loader-animation"
+        width="290"
+        height="337"
+        viewBox="0 0 290 337"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 337V0L290 167L161 242.5L176.717 268H142L95 186L132.5 161L79 129.5L78.5 262L109.5 242.5L125 267.5L50.5 312.136V82L186 161L132.5 195.5L147.5 220L237 167.5L28 47V320.5L0 337Z"
+          fill="#FFFAFA"
+        />
+      </svg>
+    </div>
     </div>
     <div id="overlay"></div>
     <div id="modal"></div>
-    
   </body>
 </html>
