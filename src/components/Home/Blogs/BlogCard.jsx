@@ -41,7 +41,8 @@ const StyledTitle = styled.h1`
   bottom: 0%;
   left: 0;
   background-color: white;
-  width: 100%;
+  word-break: normal;
+  width: 90%;
   padding: 20px;
   padding-top: 40px;
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
