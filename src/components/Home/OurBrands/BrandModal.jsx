@@ -56,7 +56,10 @@ const BrandModal = ({ index, modalClose }) => {
               <StyledAvatar src={brand.avatar}></StyledAvatar>
               <StyledTitle fontSize={fontSize}>{brand.title}</StyledTitle>
               <StyledInstagramWrapper>
-                <a target="__blank" href={`https://www.instagram.com/${brand.igHandle}/`}>
+                <a
+                  target="__blank"
+                  href={`https://www.instagram.com/${brand.igHandle}/`}
+                >
                   <StyledInstagram />
                 </a>
                 <h2>
@@ -75,7 +78,12 @@ const BrandModal = ({ index, modalClose }) => {
           <StyledDescription>
             {brand.description && brand.description}
           </StyledDescription>
-          <StyledFooter href="https://wa.me/{whatsappphonenumber}/?text={urlencodedtext}">
+          <StyledFooter
+            href={`https://wa.me/919340844430/?text=${encodeURI(
+              `Heya, I want to promote my brand on @${brand.igHandle}, how can we proceed?`
+            )}`}
+            target="__blank"
+          >
             <p>
               If you want to promote your brand on{" "}
               <strong>@{brand.title}</strong>, then click here.
@@ -156,7 +164,6 @@ const StyledYoutube = styled(Youtube)`
 `;
 
 const StyledAvatar = styled.img`
-
   width: 10rem;
   height: 10rem;
   aspect-ratio: 1/1;
@@ -218,7 +225,7 @@ const StyledDescription = styled.div`
 `;
 
 const StyledFooter = styled.a`
-text-decoration: none;
+  text-decoration: none;
   width: 100%;
   display: block;
   background-color: #25d366;

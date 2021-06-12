@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const FAB = () => {
   return (
-    <StyledFab href="https://wa.me/{whatsappphonenumber}/?text={urlencodedtext}">
+    <StyledFab href="https://wa.me/917000477353" target="__blank">
       <StyledText>How can we help you</StyledText>
       <StyledLogo>
         <Whatsapp />
