@@ -16,7 +16,8 @@ const StyledDescription = styled.h1`
   width: 85%;
   margin: 20px;
   padding: 20px;
-  /* background: linear-gradient(to right, #1c1c1c, #0a0a0a, #2b2b2b); */
+  background: linear-gradient(#1c1c1c, #0a0a0a, #2b2b2b, black, gray);
+  background-attachment: fixed;
   text-align: center;
   border-radius: 10px;
   border: 2px solid rgba(200,200,200,0.5);

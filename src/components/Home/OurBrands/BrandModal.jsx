@@ -75,7 +75,7 @@ const BrandModal = ({ index, modalClose }) => {
           <StyledDescription>
             {brand.description && brand.description}
           </StyledDescription>
-          <StyledFooter>
+          <StyledFooter href="https://wa.me/{whatsappphonenumber}/?text={urlencodedtext}">
             <p>
               If you want to promote your brand on{" "}
               <strong>@{brand.title}</strong>, then click here.
@@ -156,9 +156,10 @@ const StyledYoutube = styled(Youtube)`
 `;
 
 const StyledAvatar = styled.img`
+
   width: 10rem;
   height: 10rem;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   margin: 20px;
   box-shadow: 2px 2px 15px 2px rgba(255, 255, 255, 0.3),
@@ -216,8 +217,8 @@ const StyledDescription = styled.div`
   }
 `;
 
-const StyledFooter = styled.div`
-  cursor: pointer;
+const StyledFooter = styled.a`
+text-decoration: none;
   width: 100%;
   display: block;
   background-color: #25d366;
@@ -260,6 +261,7 @@ const StyledModal = styled(motion.div)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding-top: 2rem;
   * {
     color: white;
   }

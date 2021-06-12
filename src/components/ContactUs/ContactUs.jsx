@@ -1,16 +1,40 @@
+import axios from "axios";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import styled from "styled-components";
 import Services from '../../assets/models/Services'
 import { StyledContainer, StyledHR } from "../UI";
 
+
 const ContactUs = () => {
 
-  const [submitEnabled, setSubmitEnabled] = useState(true);
+  const [submitEnabled, setSubmitEnabled] = useState(false);
   
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    pnumber: "",
+    budget: "",
+    companyName: "",
+    startingTime: "",
+    description: "",
+  });
+
+  function inputChangeHandler(e) {
+    const name = e.target.name;
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(e);
+    console.log(formData);
+    axios.post('https://sheet.best/api/sheets/1140f02b-06f6-4d2b-ab10-f7b163a167fb',formData).then(res => console.log(res)).then(() => alert('Successfully Submitted.')).catch(error => console.error(error))
+
   };
   
 
@@ -24,39 +48,83 @@ const ContactUs = () => {
         <StyledForm onSubmit={submitHandler}>
           <h1>Reach Out to Us!</h1>
           <div>
-            <input type="text" name="fname" placeholder="First Name" />
-            <input type="text" name="lname" placeholder="Last Name" />
-            <input type="email" name="email" placeholder="Email Address" />
-            <input type="tel" name="pnumber" placeholder="Phone Number" />
-            <input type="text" name="company-name" placeholder="Company Name" />
-            <select defaultValue="">
+            <input
+              type="text"
+              name="fname"
+              value={formData.fname}
+              onChange={inputChangeHandler}
+              placeholder="First Name"
+            />
+            <input
+              type="text"
+              name="lname"
+              value={formData.lname}
+              onChange={inputChangeHandler}
+              placeholder="Last Name"
+            />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={inputChangeHandler}
+              placeholder="Email Address"
+            />
+            <input
+              type="tel"
+              name="pnumber"
+              value={formData.pnumber}
+              onChange={inputChangeHandler}
+              placeholder="Phone Number"
+            />
+            <input
+              type="text"
+              name="companyName"
+              value={formData.companyName}
+              onChange={inputChangeHandler}
+              placeholder="Company Name"
+            />
+            <select
+              name="budget"
+              value={formData.budget}
+              onChange={inputChangeHandler}
+            >
               <option value="" disabled>
                 Budget
               </option>
               <option value="op2">Option 2</option>
+              <option value="op3">Option 3</option>
             </select>
-            <select defaultValue="">
+            <select
+              name="startingTime"
+              value={formData.startingTime}
+              onChange={inputChangeHandler}
+            >
               <option value="" disabled>
                 Starting Time
               </option>
               <option value="op2">Option 2</option>
+              <option value="op3">Option 3</option>
             </select>
             <h1>Services Needed</h1>
             <br />
             <div className="checkboxes">
-              {Services.map(service => 
-              <label key={service.key}>
-                <input type="checkbox" name={service.id} />
-               {service.title}
-              </label>)
-              
-             }
+              {Services.map((service) => (
+                <label key={service.key}>
+                  <input type="checkbox" name={service.id} value={formData.checks} onChange={inputChangeHandler}/>
+                  {service.title}
+                </label>
+              ))}
             </div>
-            
-              <textarea placeholder="Details (Optional)"></textarea>
+
+            <textarea
+              placeholder="Details (Optional)"
+              name="description"
+              value={formData.description}
+              onChange={inputChangeHandler}
+            ></textarea>
           </div>
           <StyledReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={recaptchaHandler}/>
-            <button type="submit" disabled={!submitEnabled}>Submit Form</button>
+            <button type="submit" disabled={!submitEnabled}>Submit Response</button>
         </StyledForm>
         {/* </StyledWrapper> */}
       </StyledContainer>

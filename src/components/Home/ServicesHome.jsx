@@ -11,11 +11,13 @@ const ServicesHome = () => {
       <StyledWrapper>
         {ServicesObject.map((service) => {
           return (
-            <StyledTitle key={service.key}>
-              <HashLink to={`/services#${service.id}`}>
-                {service.title}
-              </HashLink>
-            </StyledTitle>
+            <ServiceTile key={service.key} bgImage={service.bgImage}>
+            <StyledSeeMore >
+              <StyledHashLink to={`/services#${service.id}`}>
+                See More
+              </StyledHashLink>
+            </StyledSeeMore>
+            </ServiceTile>
           );
         })}
       </StyledWrapper>
@@ -23,24 +25,55 @@ const ServicesHome = () => {
   );
 };
 
-const StyledWrapper = styled.div`
+const ServiceTile = styled.div`
+  background: url(${p => p.bgImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: all 0.5s ease-out;
+  &:hover{
+    transform: scale(1.05);
+  }
+`;
+
+const StyledWrapper = styled.div`
+  display: grid;
+  place-items: center;
   width: 90%;
   margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  
   @media only screen and (max-width: 600px) {
     width: 100%;
   }
 `;
 
-const StyledTitle = styled.h1`
+const StyledHashLink = styled(HashLink)`
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  &:hover {
+    text-decoration: underline;
+  }
+  
+
+`;
+
+const StyledSeeMore = styled.h1`
   font-size: 1.5rem;
-  margin: 20px;
   padding: 20px;
-  width: max-content;
-  background: linear-gradient(to right, #121122, #121121, #144122);
-  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background: linear-gradient(transparent,gray,black);
+
+  
+
   a {
     color: white;
     text-decoration: none;

@@ -9,6 +9,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BlogPage from "./components/Home/Blogs/BlogPage";
 import client from "./clients";
 import { useState, useEffect } from "react";
+import Cursor from "./components/Cursor";
+import Blogs from "./components/Home/Blogs/Blogs";
+import FAB from "./components/FAB/FAB";
 
 function App() {
   // const posts = [];
@@ -20,16 +23,9 @@ function App() {
       .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
       .catch(console.error);
   }, []);
-  const loadHandler = () => {
-    console.log("loaded");
-  };
 
-  useEffect(() => {
-    window.addEventListener("load", loadHandler);
-    return () => {
-      window.removeEventListener("load", loadHandler);
-    };
-  }, []);
+
+  
   return (
     <Router>
       <div className="root-div">
@@ -52,9 +48,14 @@ function App() {
           <Route path="/blogs/:blogtitle">
             <BlogPage />
           </Route>
+          <Route path="/blogs">
+            <Blogs posts={posts}/>
+          </Route>
         </Switch>
         <Footer />
+        <FAB/>
       </div>
+        <Cursor/>
     </Router>
   );
 }

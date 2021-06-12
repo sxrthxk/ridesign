@@ -6,28 +6,25 @@ const OurJourney = () => {
         <StyledWrapper>
             <StyledSection>
                 <StyledYear>2017</StyledYear>
-                <StyledDescription>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad delectus iste accusamus vel, recusandae assumenda voluptates nam et quos laboriosam quidem nobis facilis. Dolor eum voluptates voluptatum animi, nihil repudiandae.</StyledDescription>
+                <StyledDescription>The founder of the company Rishav and Dheeraj Jaisani got an idea to start a media agency which will help people with Fast and Superior Quality of Promotions, content creation and logo designing.</StyledDescription>
             </StyledSection>
             <StyledSection>
                 <StyledYear>2018</StyledYear>
-                <StyledDescription>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad delectus iste accusamus vel, recusandae assumenda voluptates nam et quos laboriosam quidem nobis facilis. Dolor eum voluptates voluptatum animi, nihil repudiandae.</StyledDescription>
+                <StyledDescription>In these years, the owners of the company really worked hard to get their First hundred clients. After  Researching about the market they worked for 24×7, day and night so that they can work for more and more number of clients with punctuality.</StyledDescription>
             </StyledSection>
             <StyledSection>
                 <StyledYear>2019</StyledYear>
-                <StyledDescription>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad delectus iste accusamus vel, recusandae assumenda voluptates nam et quos laboriosam quidem nobis facilis. Dolor eum voluptates voluptatum animi, nihil repudiandae.</StyledDescription>
+                <StyledDescription>After a lot of hard work the first office was set in the city of Dewas, Madhya Pradesh. As their work quality was extremely good they started getting clients everyday and touched the milestone of one thousand clients very soon.</StyledDescription>
             </StyledSection>
             <StyledSection>
                 <StyledYear>2020</StyledYear>
-                <StyledDescription>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad delectus iste accusamus vel, recusandae assumenda voluptates nam et quos laboriosam quidem nobis facilis. Dolor eum voluptates voluptatum animi, nihil repudiandae.</StyledDescription>
+                <StyledDescription>As we all know that in year 2020 due to corona virus pandemic most of the buisness were shutting down but even at this peak time both the owners of the company didn't loose their hope and continued working more frequently and effectively then before from home itself. From their hard work and perseverance, brands started with collaborating with them and although the owners also started their own brand's to grow. </StyledDescription>
             </StyledSection>
             <StyledSection>
                 <StyledYear>2021</StyledYear>
-                <StyledDescription>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad delectus iste accusamus vel, recusandae assumenda voluptates nam et quos laboriosam quidem nobis facilis. Dolor eum voluptates voluptatum animi, nihil repudiandae.</StyledDescription>
+                <StyledDescription>And finally in 2021 they are going to launch their brands across the globe to help more and more number of people so that they can acheive aim of RIDESIGN MEDIA.</StyledDescription>
             </StyledSection>
-            <StyledSection>
-                <StyledYear>2022</StyledYear>
-                <StyledDescription>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad delectus iste accusamus vel, recusandae assumenda voluptates nam et quos laboriosam quidem nobis facilis. Dolor eum voluptates voluptatum animi, nihil repudiandae.</StyledDescription>
-            </StyledSection>
+            
         </StyledWrapper>
     )
 }
@@ -36,7 +33,7 @@ const StyledSection = styled.section`
 position: relative;
 padding: 20px 0px;
 scroll-behavior: smooth;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* min-height: 20rem; */
     height: 20rem;
     display: flex;
@@ -52,7 +49,8 @@ scroll-behavior: smooth;
 
 const StyledYear = styled.h1`
 /* height: 20rem; */
-    width: 30rem;
+    /* width: 30rem; */
+    min-width: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,6 +67,12 @@ const StyledYear = styled.h1`
 `;
 
 const StyledDescription = styled.div`
+display: flex;
+align-items: center;
+margin: 5rem;
+@media only screen and (max-width: 600px){
+    margin: 2rem;
+}
 `;
 
 const StyledWrapper = styled.div`

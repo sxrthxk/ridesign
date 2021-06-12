@@ -1,5 +1,10 @@
+:root{
+  --nav-height-open-desk: 198px;
+  --nav-height-open-mob: 128px;
+}
+
 .nav-container{
-  height: 168px;
+  height: var(--nav-height-open-desk);
   position: relative;
   z-index: 10;
 }
@@ -29,7 +34,7 @@
 }
 
 .navbar-wrapper.accordOpen {
-  height: 340px;
+  height: 370px;
 }
 
 .links {
@@ -98,7 +103,7 @@
 
 @media only screen and (max-width: 600px) {
   .nav-container{
-    height: 108px;
+    height: var(--nav-height-open-mob);
   }
   .navbar-wrapper {
     margin: 10px auto;
@@ -106,7 +111,7 @@
     width: 90%;
   }
   .navbar-wrapper.accordOpen {
-    height: 250px;
+    height: 280px;
   }
   .accordion-title {
     height: 27px;

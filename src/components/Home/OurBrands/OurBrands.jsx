@@ -55,7 +55,8 @@ const StyledBrand = styled.div`
       width: auto;
       font-weight: lighter;
       font-size: 1rem;
-      word-wrap: break-word;
+      overflow-wrap: break-word;
+      /* word-wrap: break-word; */
     }
   }
 `;

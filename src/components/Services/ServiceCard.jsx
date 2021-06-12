@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 const ServiceCard = ({ title, content, id, serviceImage }) => {
+  AOS.init()
   return (
     <StyledCard>
-      <StyledImage src={serviceImage}></StyledImage>
+      <StyledImage data-aos="fade-down" src={serviceImage}></StyledImage>
       <StyledWrapper>
         <span id={id}></span>
         <StyledTitle>{title}</StyledTitle>
@@ -56,11 +60,11 @@ const StyledWrapper = styled.div`
   } */
   span {
     position: absolute;
-    top: -148px;
+    top: -164px;
   }
   @media only screen and (max-width: 600px) {
     span {
-      top: -108px;
+      top: -128px;
     }
   }
 `;
@@ -74,9 +78,10 @@ const StyledTitle = styled.h1`
 `;
 
 const StyledDescription = styled.div`
-  margin: 20px 10px;
+  margin: 20px 0px;
   font-weight: lighter;
   word-wrap: break-word;
+  overflow-wrap: break-word;
 `;
 
 export default ServiceCard;

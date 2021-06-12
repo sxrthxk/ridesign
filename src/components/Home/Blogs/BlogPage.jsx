@@ -44,6 +44,7 @@ const StyledHeading = styled.h1`
 
 const StyledContent = styled.p`
     color: white;
+    width: 80%;
 `;
 
 export default BlogPage
