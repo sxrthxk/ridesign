@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const FAB = () => {
   return (
-    <StyledFab href="https://wa.me/917000477353" target="__blank">
+    <StyledFab href={`https://wa.me/917000477353/text=${encodeURI('Heya, we want to work with ridesignmedia, how can we proceed?')}`} target="__blank">
       <StyledText>How can we help you</StyledText>
       <StyledLogo>
         <Whatsapp />
@@ -13,6 +13,7 @@ const FAB = () => {
 };
 
 const StyledFab = styled.a`
+z-index: 999;
 text-decoration: none;
   border-radius: 40px;
   background-color: rgb(26,26,26);

@@ -1,16 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledContainer, StyledHR } from "../UI";
+import { StyledContainer, StyledHR, StyledTitle } from "../UI";
 import LogoVid from "../../assets/videos/logo-anim.mp4";
 import OurJourney from "./OurJourney";
+import { useEffect } from "react";
 
 const AboutUs = () => {
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+    
+  }, [])
+
   return (
     <>
       <StyledContainer>
         <StyledBrandDescription>
           <StyledBrandText>
-            Ridesignmedia, a social media agency based in Dewas, Madhya Pradesh.
+            <strong>Ridesignmedia, a social media agency based in Dewas, Madhya Pradesh. </strong>
             Our agency helps clients by providing different services with 100%
             customer satisfaction. We have worked with more than 300+ million
             base on Instagram as well as on social media platforms. Our agency
@@ -43,7 +50,7 @@ const AboutUs = () => {
         <OurJourney />
 
         <StyledOurTeamWrapper>
-          <h1>Our Team</h1>
+          <StyledTitle><span>Our </span>Team</StyledTitle>
           Team Ridesignmedia is a team of young enthusiasts. Our team work
           really work very hard 24×7 to acheive goals. We have the best team of
           professionals in different niches with extremely high skills. Also our
@@ -52,7 +59,8 @@ const AboutUs = () => {
         </StyledOurTeamWrapper>
 
         <StyledClients>
-          <h1>Our Clients</h1>
+        <StyledTitle><span>Our </span>Clients</StyledTitle>
+          
           Working with our clients is an amazing experience of all time for us.
           Team Ridesignmedia has worked for more than 300 million base on social
           media and also helped thousands of brands to sustain their branding on
@@ -68,11 +76,10 @@ const AboutUs = () => {
 };
 
 const StyledClients = styled.h2`
+  font-family: 'montserrat', sans-serif;
+  font-weight: lighter;
   color: white;
-  h1{
-    margin: 20px;
-    width: max-content;
-  }
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,11 +111,13 @@ const StyledBrandDescription = styled.div`
 `;
 
 const StyledBrandText = styled.p`
+font-family: 'montserrat', sans-serif;
+font-weight: lighter;
   color: white;
   word-wrap: normal;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  display: flex;
+  display: inline;
   align-items: center;
   @media only screen and (max-width: 600px) {
     font-size: 1rem;
@@ -118,16 +127,19 @@ const StyledBrandText = styled.p`
 const StyledBrandLogo = styled.div``;
 
 const StyledOurTeamWrapper = styled.h2`
+font-family: 'montserrat', sans-serif;
+  font-weight: lighter;
   flex-direction: column;
   align-items: center;
   h1 {
-    margin: 20px;
+    /* margin: 20px; */
   }
   padding: 3rem;
   color: white;
   margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   @media only screen and (max-width: 600px) {
     h1{
       font-size: 2.5rem;

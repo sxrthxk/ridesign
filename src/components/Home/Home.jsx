@@ -14,6 +14,7 @@ const Home = ({ posts, blogAvailable }) => {
             <ServicesHome />
             <OurBrands />
             <Blogs posts={posts} blogAvailable={blogAvailable} />
+            {/* <StyledTop onClick={window.scrollTo(0,0)}/> */}
             <StyledHR />
         </>
     )

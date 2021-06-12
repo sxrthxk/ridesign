@@ -73,7 +73,7 @@ const BrandModal = ({ index, modalClose }) => {
               </StyledInstagramWrapper>
               {brand.ytHandle && <StyledYoutube />}
             </StyledInfo>
-            <StyledInsights src={brand.showcase} />
+            <StyledInsights src={brand.insights} />
           </StyledBody>
           <StyledDescription>
             {brand.description && brand.description}
@@ -86,7 +86,7 @@ const BrandModal = ({ index, modalClose }) => {
           >
             <p>
               If you want to promote your brand on{" "}
-              <strong>@{brand.title}</strong>, then click here.
+              <strong>@{brand.igHandle}</strong>, then click here.
             </p>
           </StyledFooter>
         </StyledModal>,
@@ -114,9 +114,10 @@ const StyledInfo = styled.div`
 
 const StyledInstagram = styled(Instagram)`
   fill: white;
-
+  
   h2 {
     display: flex;
+    
     flex-direction: column;
   }
 `;
@@ -127,11 +128,12 @@ const StyledInstagramWrapper = styled.div`
   border-radius: 1rem;
   padding: 10px;
   align-items: center;
+  /* margin-right: 50px; */
   justify-content: space-between;
   a {
     width: 3rem;
     height: 3rem;
-    margin: 0px 10px;
+    margin: 0px 20px;
     svg {
       width: 100%;
       height: 100%;
@@ -146,12 +148,20 @@ const StyledInstagramWrapper = styled.div`
         height: 100%;
       }
     }
+    
   }
 
   h2 {
+    font-size: 2.5rem;
+    /* letter-spacing: ; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media only screen and (max-width: 600px) { 
+      font-size: 1.5rem;
+    }
     p {
       font-size: 1rem;
       font-weight: lighter;
@@ -169,10 +179,10 @@ const StyledAvatar = styled.img`
   aspect-ratio: 1/1;
   border-radius: 50%;
   margin: 20px;
-  box-shadow: 2px 2px 15px 2px rgba(255, 255, 255, 0.3),
-    -2px -2px 15px 2px rgba(255, 255, 255, 0.3),
-    2px -2px 15px 2px rgba(255, 255, 255, 0.3),
-    -2px 2px 15px 2px rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 2px 15px 2px #00ff00,
+    -2px -2px 15px 2px #00ff00,
+    2px -2px 15px 2px #00ff00,
+    -2px 2px 15px 2px #00ff00;
 `;
 
 const StyledTitle = styled.h1`
@@ -214,13 +224,18 @@ const StyledInsights = styled.img`
 `;
 
 const StyledDescription = styled.div`
+  font-family: 'montserrat', sans-serif;
+  font-weight: lighter;
+  line-height: 1.6rem;
   scroll-behavior: smooth;
   display: flex;
   align-items: center;
   margin: 20px;
   text-align: center;
+  
   @media only screen and (max-width: 600px) {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-weight: normal;
   }
 `;
 
@@ -228,7 +243,7 @@ const StyledFooter = styled.a`
   text-decoration: none;
   width: 100%;
   display: block;
-  background-color: #25d366;
+  background-color: #00ff00;
   display: flex;
   justify-content: center;
   p {
@@ -274,6 +289,8 @@ const StyledModal = styled(motion.div)`
   }
   @media only screen and (max-width: 786px) {
     width: 90%;
+  padding-top: 1rem;
+
   }
 `;
 

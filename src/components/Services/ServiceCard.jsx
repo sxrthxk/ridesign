@@ -17,12 +17,58 @@ const ServiceCard = ({ title, content, id, serviceImage }) => {
     </StyledCard>
   );
 };
+  
+  const StyledWrapper = styled.div`
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px auto;
+    /* padding: 20px; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* &:before{
+      display: block;
+      content: "";
+      margin-top: -558px;
+      height: 558px;
+      visibility: hidden;
+      pointer-events: none;
+    } */
+    span {
+      position: absolute;
+      top: -164px;
+    }
+    @media only screen and (max-width: 600px) {
+      span {
+        top: -128px;
+      }
+    }
+  `;
+  
+  const StyledTitle = styled.h1`
+  
+    margin: auto;
+    width: 100%;
+    /* background: linear-gradient(to right, #121122, #121121, #144122); */
+    font-size: 3rem;
+  `;
 
 const StyledCard = styled.div`
+z-index: 2;
+overflow: hidden;
+
+  &:last-child ${StyledWrapper} ${StyledTitle}{
+    @media only screen and (max-width: 600px){
+      font-size: 2rem;
+    }
+  }
+
   &:nth-child(odd) {
     flex-direction: row-reverse;
+   
   }
-  box-shadow: -2px -2px 2px #27272792;
+  /* box-shadow: -2px -2px 2px #27272792; */
   display: flex;
   align-items: center;
   @media only screen and (max-width: 786px) {
@@ -34,8 +80,8 @@ const StyledCard = styled.div`
 `;
 
 const StyledImage = styled.img`
-  margin: 50px auto;
-  width: 50%;
+  margin: 40px 40px;
+  width: 40%;
   height: 100%;
   @media only screen and (max-width: 786px) {
     width: 90%;
@@ -43,41 +89,10 @@ const StyledImage = styled.img`
   }
 `;
 
-const StyledWrapper = styled.div`
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 20px auto;
-  padding: 20px;
-  position: relative;
-  /* &:before{
-    display: block;
-    content: "";
-    margin-top: -558px;
-    height: 558px;
-    visibility: hidden;
-    pointer-events: none;
-  } */
-  span {
-    position: absolute;
-    top: -164px;
-  }
-  @media only screen and (max-width: 600px) {
-    span {
-      top: -128px;
-    }
-  }
-`;
-
-const StyledTitle = styled.h1`
-  margin: auto;
-  padding: 20px;
-  width: fit-content;
-  background: linear-gradient(to right, #121122, #121121, #144122);
-  border-radius: 10px;
-`;
-
 const StyledDescription = styled.div`
+width: 90%;
+  font-family: 'montserrat', sans-serif;
+  line-height: 2rem;
   margin: 20px 0px;
   font-weight: lighter;
   word-wrap: break-word;

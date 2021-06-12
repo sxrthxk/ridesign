@@ -1,13 +1,14 @@
 import React from "react";
-import { StyledContainer } from "../UI";
+import { StyledContainer, StyledTitle } from "../UI";
 
-import ServicesObject from "../../assets/models/Services";
+import ServicesObject from "../../assets/models/ServicesModel";
 import styled from "styled-components";
 import { HashLink } from "react-router-hash-link";
 
 const ServicesHome = () => {
   return (
     <StyledContainer>
+      <StyledTitle><span>Our</span> Services</StyledTitle>
       <StyledWrapper>
         {ServicesObject.map((service) => {
           return (
@@ -26,7 +27,7 @@ const ServicesHome = () => {
 };
 
 const ServiceTile = styled.div`
-  background: url(${p => p.bgImage});
+  background-image: url(${p => p.bgImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,7 +71,6 @@ const StyledSeeMore = styled.h1`
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  background: linear-gradient(transparent,gray,black);
 
   
 

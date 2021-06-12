@@ -24,7 +24,7 @@ const Footer = () => {
         <StyledLinks
           target="_blank"
           rel="noreferrer noopener"
-          href="https://www.instagram.com/ridesignmedia/"
+          href="mailto:rishav@ridesignmedia.com"
         >
           <Mail />
         </StyledLinks>

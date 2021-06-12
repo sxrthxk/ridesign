@@ -1,12 +1,17 @@
 import React from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
-import { StyledContainer } from "../../UI";
+import { StyledContainer, StyledTitle } from "../../UI";
 import BlogCard from "./BlogCard";
 
 const Blogs = ({posts}) => {
-
+  useEffect(() => {
+    window.scrollTo(0,0)
+    
+  }, [])
   return (
     <StyledContainer>
+      <StyledTitle><span>Our</span> Blogs</StyledTitle>
       <StyledGrid>
       {posts.length ? (
         posts.map((post) => 

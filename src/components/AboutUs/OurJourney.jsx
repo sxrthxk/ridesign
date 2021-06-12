@@ -6,7 +6,7 @@ const OurJourney = () => {
         <StyledWrapper>
             <StyledSection>
                 <StyledYear>2017</StyledYear>
-                <StyledDescription>The founder of the company Rishav and Dheeraj Jaisani got an idea to start a media agency which will help people with Fast and Superior Quality of Promotions, content creation and logo designing.</StyledDescription>
+                <StyledDescription>The founder of the company Rishav Jaisani & Dheeraj Jaisani got an idea to start a media agency which will help people with Fast and Superior Quality of Promotions, content creation and logo designing.</StyledDescription>
             </StyledSection>
             <StyledSection>
                 <StyledYear>2018</StyledYear>
@@ -48,6 +48,7 @@ scroll-behavior: smooth;
 `;
 
 const StyledYear = styled.h1`
+font-family: 'coolvetica';
 /* height: 20rem; */
     /* width: 30rem; */
     min-width: 20rem;
@@ -76,6 +77,8 @@ margin: 5rem;
 `;
 
 const StyledWrapper = styled.div`
+font-family: 'montserrat', sans-serif;
+line-height: 1.8rem;
     width: 100%;
     overflow-y: scroll;
     height: 20rem;

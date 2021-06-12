@@ -1,12 +1,18 @@
 import axios from "axios";
+import { useEffect } from "react";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import styled from "styled-components";
-import Services from '../../assets/models/Services'
+import Services from '../../assets/models/ServicesModel'
 import { StyledContainer, StyledHR } from "../UI";
 
 
 const ContactUs = () => {
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+    
+  }, [])
 
   const [submitEnabled, setSubmitEnabled] = useState(false);
   
@@ -117,6 +123,7 @@ const ContactUs = () => {
             </div>
 
             <textarea
+            rows="8"
               placeholder="Details (Optional)"
               name="description"
               value={formData.description}
@@ -139,15 +146,20 @@ const StyledReCAPTCHA = styled(ReCAPTCHA)`
 `;
 
 const StyledForm = styled.form`
+border-radius: 2rem;
   width: 100%;
   height: fit-content;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 20px;
-  background-color: #b6b6b6;
-  h1 {
+  background-color: white;
+  opacity: 80%;
+  h1{
     margin: 20px;
+  }
+  h1:first-child {    
+    font-size: 3rem;
   }
   label > input{
     width: 1rem;
@@ -160,13 +172,16 @@ const StyledForm = styled.form`
   .checkboxes{
     display: flex;
     flex-direction: column;
+    font-size: 1.5rem;
     grid-column-start: 1;
     grid-column-end: 3;
   }
+  
   textarea{
     grid-column-start: 1;
     grid-column-end: 3;
     width: 100%;
+    
   }
   input,
   textarea,

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import BrandModal from "./BrandModal";
 import Brands from "../../../assets/models/BrandsModel";
-import { StyledContainer } from "../../UI";
+import { StyledContainer, StyledTitle } from "../../UI";
 import { AnimatePresence } from "framer-motion";
 
 const OurBrands = () => {
@@ -21,6 +21,7 @@ const OurBrands = () => {
   };
   return (
     <StyledContainer style={{ margin: "20px auto" }}>
+      <StyledTitle><span>Our</span> Brands</StyledTitle>
       <StyledWrapper>
         {Brands.map((brand, index) => (
           <StyledBrand key={brand.id}>
@@ -42,6 +43,7 @@ const OurBrands = () => {
     </StyledContainer>
   );
 };
+
 
 const StyledBrand = styled.div`
   display: flex;

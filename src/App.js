@@ -40,8 +40,8 @@ function App() {
               blogAvailable={blogAvailable}
             />
           </Route>
-          <Route path="/services" children={Services} />
-          <Route path="/about-us" children={AboutUs} />
+          <Route path="/services"><Services/></Route>
+          <Route path="/about-us"><AboutUs/></Route>
           <Route path="/contact-us">
             <ContactUs />
           </Route>
