@@ -59,7 +59,7 @@ const StyledRouterLink = styled(Link)`
   }
 
   @media only screen and (max-width: 786px) {
-    padding: 10px 30px;
+    padding: 10px 15px;
   }
   &:hover::after {
     transition: 0.2s ease-out;
@@ -92,7 +92,7 @@ const StyledLink = styled.a`
     background-color: white;
   }
   @media only screen and (max-width: 786px) {
-    padding: 10px 30px;
+    padding: 10px 15px;
   }
   &:hover::after {
     transition: 0.2s ease-out;

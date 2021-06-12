@@ -164,6 +164,10 @@ border-radius: 2rem;
   }
   h1:first-child {    
     font-size: 3rem;
+    @media only screen and (max-width: 600px){
+      margin-top: 2rem;
+      font-size: 2rem;
+    }
   }
   label > input{
     width: 1rem;
@@ -179,6 +183,9 @@ border-radius: 2rem;
     font-size: 1.5rem;
     grid-column-start: 1;
     grid-column-end: 3;
+    @media only screen and (max-width: 600px){
+      font-size: 1rem;
+    }
   }
   
   textarea{
@@ -229,14 +236,15 @@ border-radius: 2rem;
   @media only screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
+    margin: 0%;
+    
+    h1{
+      font-size: 2rem;
+    }
 
   }
   }
-  @media only screen and (max-width: 600px) {
-    margin: 0%;
-    div{
-      }
-  }
+  
 `;
 
 export default ContactUs;
