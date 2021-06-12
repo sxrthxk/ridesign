@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as Up } from '../assets/svg/iconmonstr-arrow-up-thin.svg'
 
@@ -12,7 +13,7 @@ export const StyledTop = styled(Up)`
 `;
 
 export const StyledTitle = styled.h1`
-font-family: 'montserrat', sans-serif;
+font-family: 'coolvetica', sans-serif;
 letter-spacing: 2px;
   color: white;
   width: 90%;
@@ -34,3 +35,6 @@ export const StyledContainer = styled.div`
   align-items: center;
 `;
 
+export const Image = ({src, alt}) => {
+  const [loaded, setLoaded] = useState(false)
+}

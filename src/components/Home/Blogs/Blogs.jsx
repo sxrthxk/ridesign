@@ -1,3 +1,4 @@
+import Aos from "aos";
 import React from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
@@ -6,6 +7,7 @@ import BlogCard from "./BlogCard";
 
 const Blogs = ({posts}) => {
   useEffect(() => {
+    Aos.init()
     window.scrollTo(0,0)
     
   }, [])

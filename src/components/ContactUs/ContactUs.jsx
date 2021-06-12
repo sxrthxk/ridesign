@@ -1,3 +1,4 @@
+import Aos from "aos";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -10,6 +11,7 @@ import { StyledContainer, StyledHR } from "../UI";
 const ContactUs = () => {
 
   useEffect(() => {
+    Aos.init()
     window.scrollTo(0,0)
     
   }, [])
@@ -51,7 +53,7 @@ const ContactUs = () => {
   return (
     <>
       <StyledContainer>
-        <StyledForm onSubmit={submitHandler}>
+        <StyledForm data-aos="fade-down" onSubmit={submitHandler}>
           <h1>Reach Out to Us!</h1>
           <div>
             <input
@@ -90,6 +92,7 @@ const ContactUs = () => {
               placeholder="Company Name"
             />
             <select
+              hidden
               name="budget"
               value={formData.budget}
               onChange={inputChangeHandler}
@@ -101,6 +104,7 @@ const ContactUs = () => {
               <option value="op3">Option 3</option>
             </select>
             <select
+            hidden
               name="startingTime"
               value={formData.startingTime}
               onChange={inputChangeHandler}

@@ -4,10 +4,12 @@ import { StyledContainer, StyledHR, StyledTitle } from "../UI";
 import LogoVid from "../../assets/videos/logo-anim.mp4";
 import OurJourney from "./OurJourney";
 import { useEffect } from "react";
+import Aos from "aos";
 
 const AboutUs = () => {
 
   useEffect(() => {
+    Aos.init();
     window.scrollTo(0,0)
     
   }, [])
@@ -16,7 +18,7 @@ const AboutUs = () => {
     <>
       <StyledContainer>
         <StyledBrandDescription>
-          <StyledBrandText>
+          <StyledBrandText data-aos="fade-right">
             <strong>Ridesignmedia, a social media agency based in Dewas, Madhya Pradesh. </strong>
             Our agency helps clients by providing different services with 100%
             customer satisfaction. We have worked with more than 300+ million
@@ -42,14 +44,14 @@ const AboutUs = () => {
               controls={false}
             >
               <source src={LogoVid} type="video/mp4" />
-              <h1>Your Browser does not support videos</h1>
+              <h1 style={{color: 'white'}}>Your Browser does not support videos</h1>
             </StyledVideo>
           </StyledBrandLogo>
         </StyledBrandDescription>
 
         <OurJourney />
 
-        <StyledOurTeamWrapper>
+        <StyledOurTeamWrapper data-aos="fade-left">
           <StyledTitle><span>Our </span>Team</StyledTitle>
           Team Ridesignmedia is a team of young enthusiasts. Our team work
           really work very hard 24×7 to acheive goals. We have the best team of
@@ -58,7 +60,7 @@ const AboutUs = () => {
           adaptibily and responsibility towards their work.
         </StyledOurTeamWrapper>
 
-        <StyledClients>
+        <StyledClients data-aos="fade-right">
         <StyledTitle><span>Our </span>Clients</StyledTitle>
           
           Working with our clients is an amazing experience of all time for us.

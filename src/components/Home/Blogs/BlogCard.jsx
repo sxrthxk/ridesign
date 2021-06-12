@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const BlogCard = ({ title, image }) => {
   return (
-    <StyledLink to={`/blogs/${title}`}>
-      <StyledWrapper>
+    <StyledLink  to={`/blogs/${title}`}>
+      <StyledWrapper data-aos="fade-up">
         <StyledHero src={image} />
         <StyledTitle>{title}</StyledTitle>
       </StyledWrapper>

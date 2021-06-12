@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const OurJourney = () => {
     return (
-        <StyledWrapper>
+        <StyledWrapper data-aos="fade-up">
             <StyledSection>
                 <StyledYear>2017</StyledYear>
                 <StyledDescription>The founder of the company Rishav Jaisani & Dheeraj Jaisani got an idea to start a media agency which will help people with Fast and Superior Quality of Promotions, content creation and logo designing.</StyledDescription>
@@ -49,7 +49,9 @@ scroll-behavior: smooth;
 
 const StyledYear = styled.h1`
 font-family: 'coolvetica';
-/* height: 20rem; */
+font-size: 7rem;
+letter-spacing: 5px;
+/* min-height: 20rem; */
     /* width: 30rem; */
     min-width: 20rem;
     display: flex;
@@ -63,6 +65,7 @@ font-family: 'coolvetica';
         width: 100%;
         background-color: black;
         color: white;
+        font-size: 1rem;
         
     }
 `;
@@ -72,11 +75,14 @@ display: flex;
 align-items: center;
 margin: 5rem;
 @media only screen and (max-width: 600px){
-    margin: 2rem;
+    margin: 1rem;
+    line-height: 1.2rem;
 }
 `;
 
 const StyledWrapper = styled.div`
+border-radius: 2rem 0 0 2rem;
+scroll-behavior: smooth;
 font-family: 'montserrat', sans-serif;
 line-height: 1.8rem;
     width: 100%;
@@ -85,6 +91,7 @@ line-height: 1.8rem;
     background-color: white;
     @media only screen and (max-width: 600px) {
         height: 10rem;
+        border-radius: 2rem;
     }
 `;
 

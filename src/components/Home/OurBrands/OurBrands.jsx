@@ -1,13 +1,15 @@
 import React from "react";
 
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BrandModal from "./BrandModal";
 import Brands from "../../../assets/models/BrandsModel";
 import { StyledContainer, StyledTitle } from "../../UI";
 import { AnimatePresence } from "framer-motion";
+import Aos from "aos";
 
 const OurBrands = () => {
+  useEffect(() => {Aos.init()},[])
   const [modalOpen, setModalOpen] = useState(false);
   // const [title, setTitle] = useState("")
   const [brandIndex, setBrandIndex] = useState();
@@ -24,7 +26,7 @@ const OurBrands = () => {
       <StyledTitle><span>Our</span> Brands</StyledTitle>
       <StyledWrapper>
         {Brands.map((brand, index) => (
-          <StyledBrand key={brand.id}>
+          <StyledBrand key={brand.id} data-aos="fade-right">
             <StyledAvatar
               onClick={() => {
                 modalOpenHanlder(index);

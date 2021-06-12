@@ -23,8 +23,6 @@ function App() {
       .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
       .catch(console.error);
   }, []);
-
-
   
   return (
     <Router>

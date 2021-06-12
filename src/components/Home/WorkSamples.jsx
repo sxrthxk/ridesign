@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import image1 from "../../assets/images/worksamples/image1-min.jpg";
 import image2 from "../../assets/images/worksamples/photo_2021-05-25_18-14-47-min.jpg";
 import image7 from '../../assets/images/worksamples/585318734095-min.jpg'
 import image8 from '../../assets/images/worksamples/3503641738-min.jpg'
 import { StyledContainer } from "../UI";
+import Aos from "aos";
 
 const WorkSamples = () => {
+  useEffect(() => {Aos.init()},[])
   return (
     <StyledContainer>
       <StyledSampleContainer>
-        <StyledWorkImage src={image1} />
-        <StyledWorkImage src={image2} />
-        <StyledWorkImage src={image7} />
-        <StyledWorkImage src={image8} />
+        <StyledWorkImage data-aos="fade-left" src={image1} />
+        <StyledWorkImage data-aos="fade-left" src={image2} />
+        <StyledWorkImage data-aos="fade-left" src={image7} />
+        <StyledWorkImage data-aos="fade-left" src={image8} />
       </StyledSampleContainer>
     </StyledContainer>
   );

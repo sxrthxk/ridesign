@@ -53,7 +53,7 @@ const ServicesObject = [
     id: "content-creation",
     title: "Content Creation",
     content:
-      "In the world of digital marketing, content is the king. Your ground-breaking ideas can take your business to a new height only when you use the right words to define your expertise. From all start-ups to giant businesses, content marketing can help you increase brand awareness, website traffic as well as the conversion rate. At Rodesignmedia we help you devise a content marketing strategy (https://www.envigo.co.in/content/strategy) based on the needs of your business. Being one of the best Digital Marketing agencies in India (https://www.envigo.co.in/), we provide a full-spectrum of content marketing services, which include strategy development and content creation services to promotion and distribution of content using the right channels.",
+      "In the world of digital marketing, content is the king. Your ground-breaking ideas can take your business to a new height only when you use the right words to define your expertise. From all start-ups to giant businesses, content marketing can help you increase brand awareness, website traffic as well as the conversion rate. At Ridesignmedia we help you design a content marketing strategy based on the needs of your business. Being one of the best Digital Marketing agencies in India, we provide a full-spectrum of content marketing services, which include strategy development and content creation services to promotion and distribution of content using the right Platforms.",
     image: contentcreation,
     bgImage: contentcreationbg,
   },

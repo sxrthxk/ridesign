@@ -4,15 +4,18 @@ import { StyledContainer, StyledTitle } from "../UI";
 import ServicesObject from "../../assets/models/ServicesModel";
 import styled from "styled-components";
 import { HashLink } from "react-router-hash-link";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const ServicesHome = () => {
+  useEffect(() => {Aos.init()},[])
   return (
     <StyledContainer>
       <StyledTitle><span>Our</span> Services</StyledTitle>
-      <StyledWrapper>
+      <StyledWrapper >
         {ServicesObject.map((service) => {
           return (
-            <ServiceTile key={service.key} bgImage={service.bgImage}>
+            <ServiceTile key={service.key} bgImage={service.bgImage} data-aos="fade-up">
             <StyledSeeMore >
               <StyledHashLink to={`/services#${service.id}`}>
                 See More
