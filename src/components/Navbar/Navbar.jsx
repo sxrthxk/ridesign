@@ -22,8 +22,13 @@ const Navbar = () => {
     <div className="nav-container">
       <div className={accordionHeight}>
         <div className="accordion-title">
+          <Link className="brandlogo" to="/">
           <BrandLogoDark className="brandlogo" />
+          </Link>
+          <Link to="/">
           <h1 className="brandname">ridesignMedia</h1>
+          </Link>
+
           <Logo className="hamburg" onClick={toggleAccordion} />
         </div>
         {isAccordionOpen ? (

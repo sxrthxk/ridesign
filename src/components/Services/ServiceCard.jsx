@@ -159,7 +159,7 @@ const StyledCard = styled.div`
   /* box-shadow: -2px -2px 2px #27272792; */
   display: flex;
   align-items: center;
-  @media only screen and (max-width: 786px) {
+  @media only screen and (max-width: 960px) {
     flex-direction: column;
     &:nth-child(odd) {
       flex-direction: column;

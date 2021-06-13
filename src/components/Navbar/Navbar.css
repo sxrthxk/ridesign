@@ -57,7 +57,14 @@
   justify-content: space-between;
 }
 
+
+
+a{
+  text-decoration: none;
+}
+
 .brandname {
+  text-decoration: none;
   user-select: none;
   background: -webkit-linear-gradient(
     180deg,
@@ -87,8 +94,12 @@
     background-position-x: right;
   }
 }
-
+a:visited{
+  text-decoration: none;
+  color: inherit;
+}
 .brandlogo {
+  user-select: none;
   height: 68px;
   width: auto;
   margin: 0;

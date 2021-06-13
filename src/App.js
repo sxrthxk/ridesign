@@ -23,8 +23,23 @@ function App() {
       .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
       .catch(console.error);
   }, []);
-  
+
+  // ---------------------------------- LOADING LOGIC -------------------------------------
+
+  // const [loading, setLoading] = useState(true)
+
+  // function onLoadHandler() {
+  //   console.log('Loaded Success');
+  //   setLoading(false)
+  // }
+  // useEffect(() => {
+  //   window.onload =  onLoadHandler;
+    
+  // }, [])
+
+  // --------------------------------------------------------------------------------------
   return (
+    // loading ? <StyledLoader>Loading</StyledLoader> :
     <Router>
       <div className="root-div">
         <Navbar />

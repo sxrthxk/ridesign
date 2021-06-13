@@ -12,10 +12,10 @@ const WorkSamples = () => {
   return (
     <StyledContainer>
       <StyledSampleContainer>
-        <StyledWorkImage data-aos="fade-left" src={image1} />
-        <StyledWorkImage data-aos="fade-left" src={image2} />
-        <StyledWorkImage data-aos="fade-left" src={image7} />
-        <StyledWorkImage data-aos="fade-left" src={image8} />
+        <StyledWorkImage src={image1} />
+        <StyledWorkImage src={image2} />
+        <StyledWorkImage src={image7} />
+        <StyledWorkImage src={image8} />
       </StyledSampleContainer>
     </StyledContainer>
   );
@@ -45,6 +45,7 @@ const StyledWorkImage = styled.img`
   width: 100%;
   aspect-ratio: 1;
   transition: ease-in-out 100ms;
+  
   &:hover {
     transform: scale(1.1);
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledHR } from '../UI'
+import { BackToTop, StyledHR } from '../UI'
 import WorkSamples from './WorkSamples'
 import BrandDesc from './BrandDesc'
 import ServicesHome from './ServicesHome'
@@ -16,6 +16,7 @@ const Home = ({ posts, blogAvailable }) => {
             <OurBrands />
             <Blogs posts={posts} blogAvailable={blogAvailable} />
             {/* <StyledTop onClick={window.scrollTo(0,0)}/> */}
+            {/* <BackToTop/> */}
             <StyledHR />
         </>
     )
