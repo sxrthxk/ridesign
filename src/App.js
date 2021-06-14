@@ -58,8 +58,8 @@ function App() {
           <Route path="/contact-us">
             <ContactUs />
           </Route>
-          <Route path="/blogs/:blogtitle">
-            <BlogPage />
+          <Route path="/blogs/:blogId">
+            <BlogPage posts={posts}/>
           </Route>
           <Route path="/blogs">
             <Blogs posts={posts}/>

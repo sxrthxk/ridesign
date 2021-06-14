@@ -39,7 +39,7 @@ const StyledRouterLink = styled(Link)`
   margin: 0px 20px;
   background-color: transparent;
 
-  color: teal;
+  color: teal !important;
   border: 2px solid teal;
   box-sizing: border-box;
   padding: 15px 45px;
@@ -72,7 +72,6 @@ const StyledLink = styled.a`
   text-decoration: none;
   margin: 0px 20px;
   background-color: teal;
-  color: teal;
   border: 2px solid teal;
   box-sizing: border-box;
   padding: 15px 45px;

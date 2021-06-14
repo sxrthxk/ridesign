@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as Up } from '../assets/svg/iconmonstr-arrow-up-thin.svg'
 import { Link } from 'react-router-dom'
-import { keyframes } from "styled-components";
 
 
 export const BackToTop = () => {

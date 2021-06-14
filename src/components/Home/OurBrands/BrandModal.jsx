@@ -11,7 +11,7 @@ import axios from "axios";
 
 const BrandModal = ({ index, modalClose }) => {
   const brand = Brands[index];
-  console.log(index);
+  // console.log(index);
   var fontSize = "2rem";
   if (index === 4) {
     fontSize = "1.5rem";
@@ -28,7 +28,7 @@ const BrandModal = ({ index, modalClose }) => {
         // console.log(res.data.data.followers);
         setFollowers(res.data.data.followers);
 
-        console.log(followers);
+        // console.log(followers);
       })
       .then(() => {
         setLoading(false);
@@ -224,6 +224,7 @@ const StyledInsights = styled.img`
 `;
 
 const StyledDescription = styled.div`
+
   font-family: 'montserrat', sans-serif;
   font-weight: lighter;
   line-height: 1.6rem;
@@ -234,7 +235,9 @@ const StyledDescription = styled.div`
   text-align: center;
   
   @media only screen and (max-width: 600px) {
+  /* overflow: scroll; */
     font-size: 0.8rem;
+    line-height: 1rem;
     font-weight: normal;
   }
 `;
@@ -267,17 +270,17 @@ const StyledOverlay = styled(motion.div)`
   height: 100vh;
   box-sizing: border-box;
   background-color: #696969e2;
-  z-index: 99;
+  z-index: 999;
 `;
 
 const StyledModal = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   background-color: black;
   border-radius: 20px;
   /* padding: 50px; */
-  overflow: hidden;
   z-index: 1001;
   position: fixed;
   top: 50%;
@@ -289,6 +292,7 @@ const StyledModal = styled(motion.div)`
   }
   @media only screen and (max-width: 786px) {
     width: 90%;
+    /* height: 80vh; */
   padding-top: 1rem;
 
   }

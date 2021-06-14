@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const BlogCard = ({ title, image }) => {
+const BlogCard = ({ id, title, image }) => {
   return (
-    <StyledLink  to={`/blogs/${title}`}>
+    <StyledLink  to={`/blogs/${id}`}>
       <StyledWrapper data-aos="fade-up">
         <StyledHero src={image} />
         <StyledTitle>{title}</StyledTitle>

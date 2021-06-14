@@ -14,7 +14,7 @@ const OurBrands = () => {
   // const [title, setTitle] = useState("")
   const [brandIndex, setBrandIndex] = useState();
   const modalOpenHanlder = (index) => {
-    console.log(index);
+    // console.log(index);
     setBrandIndex(index);
     setModalOpen(true);
   };

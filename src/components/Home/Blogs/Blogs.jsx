@@ -17,7 +17,7 @@ const Blogs = ({posts}) => {
       <StyledGrid>
       {posts.length ? (
         posts.map((post) => 
-          <BlogCard key={post.sys.id} title={post.fields.title} image={post.fields.hero.fields.file.url}/>
+          <BlogCard key={post.sys.id} title={post.fields.title} id={post.sys.id} image={post.fields.hero.fields.file.url}/>
         )
       ) : null}
       </StyledGrid>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackToTop, StyledHR } from '../UI'
+import { StyledHR } from '../UI'
 import WorkSamples from './WorkSamples'
 import BrandDesc from './BrandDesc'
 import ServicesHome from './ServicesHome'

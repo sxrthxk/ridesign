@@ -40,14 +40,14 @@ const ContactUs = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     axios.post('https://sheet.best/api/sheets/1140f02b-06f6-4d2b-ab10-f7b163a167fb',formData).then(res => console.log(res)).then(() => alert('Successfully Submitted.')).catch(error => console.error(error))
 
   };
   
 
   function recaptchaHandler() {
-    console.log("Recap done");
+    // console.log("Recap done");
     setSubmitEnabled(true);
   }
   return (
