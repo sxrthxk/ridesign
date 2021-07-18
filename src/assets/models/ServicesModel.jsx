@@ -8,14 +8,14 @@ import logodesign from '../images/services/Logo Designing.png'
 import mememarketing from '../images/services/Meme Marketing.png'
 // -------------end img imports
 
-import managementbg from "../images/services/bg/SOCIALMEDIAMANAGEMENT.png"
-import videocreationbg from '../images/services/bg/vIDEOcREATION.png'
-import webdevbg from '../images/services/bg/WEBDEVELOPMENT.png'
-import brandingbg from '../images/services/bg/bRANDING.png'
-import campaigncreationbg from '../images/services/bg/CAMPAIGNCREATION.png'
-import contentcreationbg from '../images/services/bg/CONTENTCREATION.png'
-import logodesignbg from '../images/services/bg/LOGODESIGNING.png'
-import mememarketingbg from '../images/services/bg/memeMARKETING.png'
+import managementbg from "../images/services/bg/SOCIALMEDIAMANAGEMENT.jpg"
+import videocreationbg from '../images/services/bg/vIDEOcREATION.jpg'
+import webdevbg from '../images/services/bg/WEBDEVELOPMENT.jpg'
+import brandingbg from '../images/services/bg/bRANDING.jpg'
+import campaigncreationbg from '../images/services/bg/CAMPAIGNCREATION.jpg'
+import contentcreationbg from '../images/services/bg/CONTENTCREATION.jpg'
+import logodesignbg from '../images/services/bg/LOGODESIGNING.jpg'
+import mememarketingbg from '../images/services/bg/memeMARKETING.jpg'
 
 const ServicesObject = [
   {

@@ -8,26 +8,26 @@ import transfovation from '../images/brands/transfovation.jpg'
 import ridesignmedia from '../images/brands/ridesignmedia.jpg'
 
 // --------END AVATAR IMPORTS ----------------
-import ridesignmediashow from '../images/brands/showcase/1 (11).png'
-import hindustanstockupdatesshow from '../images/brands/showcase/3 (8).png'
-import malessoulshow from '../images/brands/showcase/7 (7).png'
-import dewasiiishow from '../images/brands/showcase/8 (4).png'
-import wtfexitshow from '../images/brands/showcase/2 (10).png'
-import teninvestorshow from '../images/brands/showcase/9 (3).png'
-import transfovationshow from '../images/brands/showcase/10 (2).png'
-import cryptoaxeshow from '../images/brands/showcase/11.png'
+import ridesignmediashow from '../images/brands/showcase/1 (11).jpg'
+import hindustanstockupdatesshow from '../images/brands/showcase/3 (8).jpg'
+import malessoulshow from '../images/brands/showcase/7 (7).jpg'
+import dewasiiishow from '../images/brands/showcase/8 (4).jpg'
+import wtfexitshow from '../images/brands/showcase/2 (10).jpg'
+import teninvestorshow from '../images/brands/showcase/9 (3).jpg'
+import transfovationshow from '../images/brands/showcase/10 (2).jpg'
+import cryptoaxeshow from '../images/brands/showcase/11.jpg'
 
 // --------END SHOWCASE IMPORTS --------------
 
 
-import ridesignmediainsights from '../images/brands/insights/Ri Design Media.png'
-import hindustanstockupdatesinsights from '../images/brands/insights/Hindustan Stock Update.png'
-import malessoulinsights from '../images/brands/insights/mALE sOUL.png'
-import dewasiiiinsights from '../images/brands/insights/DEWASIII.png'
-import wtfexitinsights from '../images/brands/insights/WTF exit.png'
-import teninvestorinsights from '../images/brands/insights/10 InvEstors.png'
-import transfovationinsights from '../images/brands/insights/Transfovation.png'
-import cryptoaxeinsights from '../images/brands/insights/Ctypto Axe.png'
+import ridesignmediainsights from '../images/brands/insights/Ri Design Media.jpg'
+import hindustanstockupdatesinsights from '../images/brands/insights/Hindustan Stock Update.jpg'
+import malessoulinsights from '../images/brands/insights/mALE sOUL.jpg'
+import dewasiiiinsights from '../images/brands/insights/DEWASIII.jpg'
+import wtfexitinsights from '../images/brands/insights/WTF exit.jpg'
+import teninvestorinsights from '../images/brands/insights/10 InvEstors.jpg'
+import transfovationinsights from '../images/brands/insights/Transfovation.jpg'
+import cryptoaxeinsights from '../images/brands/insights/Ctypto Axe.jpg'
 
 const Brands = [
   {
