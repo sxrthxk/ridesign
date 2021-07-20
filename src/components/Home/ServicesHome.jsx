@@ -8,20 +8,29 @@ import { useEffect } from "react";
 import Aos from "aos";
 
 const ServicesHome = () => {
-  useEffect(() => {Aos.init()},[])
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <StyledContainer>
-      <StyledTitle><span>Our</span> Services</StyledTitle>
-      <StyledWrapper >
+      <StyledTitle>
+        <span>Our</span> Services
+      </StyledTitle>
+      <StyledWrapper>
         {ServicesObject.map((service) => {
           return (
-            <ServiceTile key={service.key} bgImage={service.bgImage} data-aos="fade-up">
-            <StyledSeeMore >
+            <StyledBrand key={service.key} data-aos="fade-up">
+              <StyledHashLink to={`/services#${service.id}`}>
+                <StyledAvatar src={service.bgImage}>
+                  {/* <StyledSeeMore >
               <StyledHashLink to={`/services#${service.id}`}>
                 See More
               </StyledHashLink>
-            </StyledSeeMore>
-            </ServiceTile>
+            </StyledSeeMore> */}
+                </StyledAvatar>
+              </StyledHashLink>
+              <StyledTitleHashLink>{service.title}</StyledTitleHashLink>
+            </StyledBrand>
           );
         })}
       </StyledWrapper>
@@ -29,8 +38,36 @@ const ServicesHome = () => {
   );
 };
 
+const StyledBrand = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 20px;
+  word-wrap: break-word;
+  @media only screen and (max-width: 600px) {
+    h1 {
+      /* word-wrap: break-word; */
+    }
+  }
+`;
+
+const StyledAvatar = styled.img`
+  width: 10rem;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px 4px rgba(255,255,255,0.3),
+  -2px -2px 4px 4px rgba(255,255,255,0.3);
+  @media only screen and (max-width: 600px) {
+    width: 7.5rem;
+    margin: 10px;
+  }
+`;
+
 const ServiceTile = styled.div`
-  background-image: url(${p => p.bgImage});
+  background-image: url(${(p) => p.bgImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,13 +77,20 @@ const ServiceTile = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   transition: all 0.5s ease-out;
-  &:hover{
+  &:hover {
     transform: scale(1.05);
   }
 `;
 
 const StyledWrapper = styled.div`
-  display: grid;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  user-select: none;
+
+  /* display: grid;
   place-items: center;
   width: 90%;
   margin: auto;
@@ -54,18 +98,24 @@ const StyledWrapper = styled.div`
   
   @media only screen and (max-width: 600px) {
     width: 100%;
-  }
+  } */
+`;
+
+const StyledTitleHashLink = styled(HashLink)`
+text-align: center;
+  width: auto;
+  font-weight: lighter;
+  font-size: 2rem;
+  overflow-wrap: break-word;
 `;
 
 const StyledHashLink = styled(HashLink)`
-  background-color: black;
-  padding: 10px 20px;
-  border-radius: 5px;
-  &:hover {
-    text-decoration: underline;
+  border-radius: 50%;
+  margin: 50px;
+  @media only screen and (max-width: 600px) {
+    width: 7.5rem;
+    margin: 10px;
   }
-  
-
 `;
 
 const StyledSeeMore = styled.h1`
@@ -74,8 +124,6 @@ const StyledSeeMore = styled.h1`
   width: 100%;
   display: flex;
   justify-content: flex-end;
-
-  
 
   a {
     color: white;

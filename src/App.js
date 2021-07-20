@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import Cursor from "./components/Cursor";
 import Blogs from "./components/Home/Blogs/Blogs";
 import FAB from "./components/FAB/FAB";
+import FormProvider from "./components/ContactUsContext";
 
 function App() {
   // const posts = [];
@@ -56,7 +57,9 @@ function App() {
           <Route path="/services"><Services/></Route>
           <Route path="/about-us"><AboutUs/></Route>
           <Route path="/contact-us">
+            <FormProvider>
             <ContactUs />
+            </FormProvider>
           </Route>
           <Route path="/blogs/:blogId">
             <BlogPage posts={posts}/>

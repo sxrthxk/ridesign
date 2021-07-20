@@ -1,14 +1,16 @@
 import Aos from "aos";
-import axios from "axios";
 import { useEffect } from "react";
-import { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import styled from "styled-components";
-import Services from '../../assets/models/ServicesModel'
+import { useFormData } from "../ContactUsContext";
 import { StyledContainer, StyledHR } from "../UI";
+import StepOne from "./StepOne";
+import StepThree from "./StepThree";
+import StepTwo from "./StepTwo";
 
 
 const ContactUs = () => {
+
+  const { submitHandler, pageNumber, nextPage, prevPage }= useFormData();
 
   useEffect(() => {
     Aos.init()
@@ -16,140 +18,47 @@ const ContactUs = () => {
     
   }, [])
 
-  const [submitEnabled, setSubmitEnabled] = useState(false);
+    const Steps = [<StepOne/>, <StepTwo/>, <StepThree/>]
+    const Titles = ['Services Needed', 'Contact Details', 'Additional Comments']
   
-  const [formData, setFormData] = useState({
-    fname: "",
-    lname: "",
-    email: "",
-    pnumber: "",
-    budget: "",
-    companyName: "",
-    startingTime: "",
-    description: "",
-  });
-
-  function inputChangeHandler(e) {
-    const name = e.target.name;
-    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  }
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    // axios.post('https://sheet.best/api/sheets/1140f02b-06f6-4d2b-ab10-f7b163a167fb',formData).then(res => console.log(res)).then(() => alert('Successfully Submitted.')).catch(error => console.error(error))
-
-  };
-  
-
-  function recaptchaHandler() {
-    // console.log("Recap done");
-    setSubmitEnabled(true);
-  }
   return (
     <>
       <StyledContainer>
         <StyledForm data-aos="fade-down" onSubmit={submitHandler}>
           <h1>Reach Out to Us!</h1>
+          <h2>{Titles[pageNumber]}</h2>
           <div>
-            <input
-              type="text"
-              name="fname"
-              value={formData.fname}
-              onChange={inputChangeHandler}
-              placeholder="First Name"
-            />
-            <input
-              type="text"
-              name="lname"
-              value={formData.lname}
-              onChange={inputChangeHandler}
-              placeholder="Last Name"
-            />
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={inputChangeHandler}
-              placeholder="Email Address"
-            />
-            <input
-              type="tel"
-              name="pnumber"
-              value={formData.pnumber}
-              onChange={inputChangeHandler}
-              placeholder="Phone Number"
-            />
-            <input
-              type="text"
-              name="companyName"
-              value={formData.companyName}
-              onChange={inputChangeHandler}
-              placeholder="Company Name"
-            />
-            <select
-              hidden
-              name="budget"
-              value={formData.budget}
-              onChange={inputChangeHandler}
-            >
-              <option value="" disabled>
-                Budget
-              </option>
-              <option value="op2">Option 2</option>
-              <option value="op3">Option 3</option>
-            </select>
-            <select
-            hidden
-              name="startingTime"
-              value={formData.startingTime}
-              onChange={inputChangeHandler}
-            >
-              <option value="" disabled>
-                Starting Time
-              </option>
-              <option value="op2">Option 2</option>
-              <option value="op3">Option 3</option>
-            </select>
-            <h1>Services Needed</h1>
-            <br />
-            <div className="checkboxes">
-              {Services.map((service) => (
-                <label key={service.key}>
-                  <input type="checkbox" name={service.id} value={formData.checks} onChange={inputChangeHandler}/>
-                  {service.title}
-                </label>
-              ))}
-            </div>
-
-            <textarea
-            rows="8"
-              placeholder="Details (Optional)"
-              name="description"
-              value={formData.description}
-              onChange={inputChangeHandler}
-            ></textarea>
+            {Steps[pageNumber]}
           </div>
-          <StyledReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={recaptchaHandler}/>
-            <button type="submit" disabled={!submitEnabled}>Submit Response</button>
         </StyledForm>
-        {/* </StyledWrapper> */}
+        <div>
+        {pageNumber > 0 && <StyledFormNavigator onClick={prevPage}>Prev</StyledFormNavigator>}
+        {pageNumber < 2 && <StyledFormNavigator onClick={nextPage}>Next</StyledFormNavigator>}
+        </div>
       </StyledContainer>
       <StyledHR />
     </>
   );
 };
 
-const StyledReCAPTCHA = styled(ReCAPTCHA)`
-  margin: 20px;
-  width: min-content;
+
+const StyledFormNavigator = styled.button`
+  width: auto;
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    /* width: 20rem; */
+    /* height: 5rem; */
+    font-size: 1.2rem;
+    transition: all 0.5s ease-in;
 `;
 
 const StyledForm = styled.form`
+padding-bottom: 2rem;
 border-radius: 2rem;
   width: 100%;
   height: fit-content;
@@ -159,6 +68,9 @@ border-radius: 2rem;
   margin: 20px;
   background-color: white;
   opacity: 80%;
+  h2{
+    text-decoration: underline;
+  }
   h1{
     margin: 20px;
   }

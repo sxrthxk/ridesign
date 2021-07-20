@@ -8,14 +8,14 @@ import logodesign from '../images/services/Logo Designing.png'
 import mememarketing from '../images/services/Meme Marketing.png'
 // -------------end img imports
 
-import managementbg from "../images/services/bg/SOCIALMEDIAMANAGEMENT.jpg"
-import videocreationbg from '../images/services/bg/vIDEOcREATION.jpg'
-import webdevbg from '../images/services/bg/WEBDEVELOPMENT.jpg'
-import brandingbg from '../images/services/bg/bRANDING.jpg'
-import campaigncreationbg from '../images/services/bg/CAMPAIGNCREATION.jpg'
-import contentcreationbg from '../images/services/bg/CONTENTCREATION.jpg'
-import logodesignbg from '../images/services/bg/LOGODESIGNING.jpg'
-import mememarketingbg from '../images/services/bg/memeMARKETING.jpg'
+import managementbg from "../images/services/bg/1_.jpg"
+import videocreationbg from '../images/services/bg/5_.jpg'
+import webdevbg from '../images/services/bg/8_.jpg'
+import brandingbg from '../images/services/bg/3_.jpg'
+import campaigncreationbg from '../images/services/bg/7_.jpg'
+import contentcreationbg from '../images/services/bg/4_.jpg'
+import logodesignbg from '../images/services/bg/2_.jpg'
+import mememarketingbg from '../images/services/bg/6_.jpg'
 
 const ServicesObject = [
   {
@@ -87,7 +87,7 @@ const ServicesObject = [
   {
     key: 8,
     id: "web-dev",
-    title: "Web Development /Design",
+    title: "Web Development/Design",
     content: "A website is also important because it helps to establish credibility as a business. Websites usually provide a map and directions to the company's shops or offices for visitors to find their location easily.    That's what the reason team RiDesignMedia has came up with the service of website designing. We have designed different websites in different niches as we have professionals for the service with super amazing idea's which will draw super amazing attention to your website.",
     image: webdev,
     bgImage: webdevbg,
