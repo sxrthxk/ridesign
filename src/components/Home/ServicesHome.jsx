@@ -29,7 +29,7 @@ const ServicesHome = () => {
             </StyledSeeMore> */}
                 </StyledAvatar>
               </StyledHashLink>
-              <StyledTitleHashLink>{service.title}</StyledTitleHashLink>
+              {/* <StyledTitleHashLink to={`/services#${service.id}`}>{service.title}</StyledTitleHashLink> */}
             </StyledBrand>
           );
         })}
@@ -66,21 +66,21 @@ const StyledAvatar = styled.img`
   }
 `;
 
-const ServiceTile = styled.div`
-  background-image: url(${(p) => p.bgImage});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 30rem;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  transition: all 0.5s ease-out;
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
+// const ServiceTile = styled.div`
+//   background-image: url(${(p) => p.bgImage});
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   height: 30rem;
+//   width: 100%;
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   transition: all 0.5s ease-out;
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+// `;
 
 const StyledWrapper = styled.div`
   height: auto;
@@ -101,13 +101,13 @@ const StyledWrapper = styled.div`
   } */
 `;
 
-const StyledTitleHashLink = styled(HashLink)`
-text-align: center;
-  width: auto;
-  font-weight: lighter;
-  font-size: 2rem;
-  overflow-wrap: break-word;
-`;
+// const StyledTitleHashLink = styled(HashLink)`
+// text-align: center;
+//   width: auto;
+//   font-weight: lighter;
+//   font-size: 2rem;
+//   overflow-wrap: break-word;
+// `;
 
 const StyledHashLink = styled(HashLink)`
   border-radius: 50%;
@@ -118,23 +118,23 @@ const StyledHashLink = styled(HashLink)`
   }
 `;
 
-const StyledSeeMore = styled.h1`
-  font-size: 1.5rem;
-  padding: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+// const StyledSeeMore = styled.h1`
+//   font-size: 1.5rem;
+//   padding: 20px;
+//   width: 100%;
+//   display: flex;
+//   justify-content: flex-end;
 
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  @media only screen and (max-width: 600px) {
-    a {
-      font-size: 1rem;
-      font-weight: 200;
-    }
-  }
-`;
+//   a {
+//     color: white;
+//     text-decoration: none;
+//   }
+//   @media only screen and (max-width: 600px) {
+//     a {
+//       font-size: 1rem;
+//       font-weight: 200;
+//     }
+//   }
+// `;
 
 export default ServicesHome;
