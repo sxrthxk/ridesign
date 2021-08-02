@@ -102,6 +102,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledTitleHashLink = styled(HashLink)`
+color: white;
 text-align: center;
   width: auto;
   font-weight: lighter;
