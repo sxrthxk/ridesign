@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import image1 from "../../assets/images/worksamples/IMAGE 2021-07-19 17_00_18.jpg";
-import image2 from "../../assets/images/worksamples/photo_2021-06-22_13-03-54.jpg";
-import image7 from '../../assets/images/worksamples/photo_2021-06-28_10-23-32.jpg'
-import image8 from '../../assets/images/worksamples/seedfeast final -01 (1)_.jpg'
+import image1 from "../../assets/images/worksamples/1 (2)c.jpg";
+import image2 from "../../assets/images/worksamples/2 (2)c.jpg";
+import image7 from '../../assets/images/worksamples/4 (2)c.jpg'
+import image8 from '../../assets/images/worksamples/Copy of Untitled (4)c.jpg'
 import { StyledContainer } from "../UI";
 import Aos from "aos";
 
