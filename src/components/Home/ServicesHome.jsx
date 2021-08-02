@@ -29,7 +29,7 @@ const ServicesHome = () => {
             </StyledSeeMore> */}
                 </StyledAvatar>
               </StyledHashLink>
-              {/* <StyledTitleHashLink to={`/services#${service.id}`}>{service.title}</StyledTitleHashLink> */}
+              <StyledTitleHashLink to={`/services#${service.id}`}>{service.title}</StyledTitleHashLink>
             </StyledBrand>
           );
         })}
@@ -101,13 +101,13 @@ const StyledWrapper = styled.div`
   } */
 `;
 
-// const StyledTitleHashLink = styled(HashLink)`
-// text-align: center;
-//   width: auto;
-//   font-weight: lighter;
-//   font-size: 2rem;
-//   overflow-wrap: break-word;
-// `;
+const StyledTitleHashLink = styled(HashLink)`
+text-align: center;
+  width: auto;
+  font-weight: lighter;
+  font-size: 2rem;
+  overflow-wrap: break-word;
+`;
 
 const StyledHashLink = styled(HashLink)`
   border-radius: 50%;

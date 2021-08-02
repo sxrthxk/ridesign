@@ -39,15 +39,15 @@ const StyledRouterLink = styled(Link)`
   margin: 0px 20px;
   background-color: transparent;
 
-  color: teal !important;
-  border: 2px solid teal;
+  color: #25d366 !important;
+  border: 2px solid #25d366;
   box-sizing: border-box;
   padding: 15px 45px;
   border-radius: 5px;
 
   position: relative;
   &::after {
-    background-color: teal;
+    background-color: #25d366;
     content: "";
     height: 1px;
     /* width: calc(100% - 90px); */
@@ -71,8 +71,8 @@ const StyledLink = styled.a`
   font-family: "montserrat", sans-serif;
   text-decoration: none;
   margin: 0px 20px;
-  background-color: teal;
-  border: 2px solid teal;
+  background-color: #25d366;
+  border: 2px solid #25d366;
   box-sizing: border-box;
   padding: 15px 45px;
   border-radius: 5px;

@@ -5,6 +5,7 @@ import LogoVid from "../../assets/videos/logo-anim.mp4";
 import OurJourney from "./OurJourney";
 import { useEffect } from "react";
 import Aos from "aos";
+import Counter from "../Counter";
 
 const AboutUs = () => {
 
@@ -71,6 +72,7 @@ const AboutUs = () => {
           nature with our clients that makes more than a relation of a client
           and media agency.
         </StyledClients>
+        <Counter/>
       </StyledContainer>
       <StyledHR />
     </>
