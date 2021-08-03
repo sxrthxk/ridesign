@@ -33,11 +33,14 @@ const StyledCard = styled.div`
       margin-bottom: 2rem;
       font-size: 2.5rem;
       font-weight: bold;
+      color: black;
   }
   p{
       margin: 1rem;
       font-weight: 200;
       font-size: 5rem;
+      color: black;
+
   }
 `;
 

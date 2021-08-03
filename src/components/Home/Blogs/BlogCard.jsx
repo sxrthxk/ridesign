@@ -16,6 +16,7 @@ const BlogCard = ({ id, title, image }) => {
 const StyledWrapper = styled.div`
   overflow: hidden;
   border-radius: 10px;
+  padding: 0;
   width: auto;
   height: 100%;
   box-sizing: border-box;
@@ -29,7 +30,7 @@ const StyledHero = styled.img`
   /* background: linear-gradient(red,blue,green); */
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 `;
 
 const StyledTitle = styled.h1`
@@ -42,7 +43,8 @@ const StyledTitle = styled.h1`
   left: 0;
   background-color: white;
   word-break: normal;
-  width: 90%;
+  width: 100%;
+  padding-right: 2rem;
   padding: 20px;
   padding-top: 40px;
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));

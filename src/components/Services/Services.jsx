@@ -7,6 +7,7 @@ import ServiceCard from "./ServiceCard";
 import ServicesObject from "../../assets/models/ServicesModel";
 import { useEffect } from "react";
 import styled from "styled-components";
+import Counter from "../Counter";
 
 const Services = () => {
 
@@ -41,7 +42,9 @@ const Services = () => {
             serviceImage={service.image}
           />
         ))}
+        <Counter/>
       </StyledContainer>
+
       <StyledHR />
     </>
   );
