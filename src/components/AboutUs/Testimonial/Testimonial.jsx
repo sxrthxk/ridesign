@@ -80,7 +80,7 @@ p{
 const StyledCard = styled.div`
 height: 420px;
 max-height: 420px;
-margin: 2.5rem;
+margin: 2rem;
 overflow: hidden;
 border-radius: 1rem;
 /* padding: 1rem; */
