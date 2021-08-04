@@ -26,8 +26,10 @@ const AboutUs = () => {
         infinite: true,
         speed: 200,
         slidesToShow: 3,
+        // centerPadding: '60px',
+        className: 'center',
         // slidesToScroll: 1,
-        arrows: false,
+        // arrows: true,
         centerMode: true,      
         responsive: [
           {
@@ -180,6 +182,11 @@ const StyledWrapper = styled.div`
   /* flex-wrap: wrap-reverse; */
   /* justify-content: space-around; */
   width: 90%;
+
+  .slick-slide.slick-center {
+        transform: scale(1.1);
+        transition: 0.2s all ease-in-out;
+    }
 `;
 
 const StyledClients = styled.h2`
