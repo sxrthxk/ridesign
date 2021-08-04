@@ -6,21 +6,63 @@ import OurJourney from "./OurJourney";
 import { useEffect } from "react";
 import Aos from "aos";
 import Counter from "../Counter";
+import Testimonial from "./Testimonial";
+import { TestimonialsModel } from "../../assets/models/TestimonialsModel";
+// import Carousel, { slidesToShowPlugin } from "@brainhubeu/react-carousel";
+// import "@brainhubeu/react-carousel/lib/style.css";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const AboutUs = () => {
-
   useEffect(() => {
     Aos.init();
-    window.scrollTo(0,0)
-    
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
+
+  const settings = {
+    dots: false,
+        infinite: true,
+        speed: 200,
+        slidesToShow: 3,
+        // slidesToScroll: 1,
+        arrows: false,
+        centerMode: true,      
+        responsive: [
+          {
+            breakpoint: 1300,
+            settings: {
+              centerMode: false,
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 968,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 920,
+            settings: {
+              centerMode: false,
+
+              slidesToShow: 1,
+            },
+          }
+        ],
+      };
 
   return (
     <>
       <StyledContainer>
         <StyledBrandDescription>
           <StyledBrandText data-aos="fade-right">
-            <strong>Ridesignmedia, a social media agency based in Dewas, Madhya Pradesh. </strong>
+            <strong>
+              Ridesignmedia, a social media agency based in Dewas, Madhya
+              Pradesh.{" "}
+            </strong>
             Our agency helps clients by providing different services with 100%
             customer satisfaction. We have worked with more than 300+ million
             base on Instagram as well as on social media platforms. Our agency
@@ -45,7 +87,9 @@ const AboutUs = () => {
               controls={false}
             >
               <source src={LogoVid} type="video/mp4" />
-              <h1 style={{color: 'white'}}>Your Browser does not support videos</h1>
+              <h1 style={{ color: "white" }}>
+                Your Browser does not support videos
+              </h1>
             </StyledVideo>
           </StyledBrandLogo>
         </StyledBrandDescription>
@@ -53,7 +97,9 @@ const AboutUs = () => {
         <OurJourney />
 
         <StyledOurTeamWrapper data-aos="fade-left">
-          <StyledTitle><span>Our </span>Team</StyledTitle>
+          <StyledTitle>
+            <span>Our </span>Team
+          </StyledTitle>
           Team Ridesignmedia is a team of young enthusiasts. Our team work
           really work very hard 24×7 to acheive goals. We have the best team of
           professionals in different niches with extremely high skills. Also our
@@ -62,8 +108,9 @@ const AboutUs = () => {
         </StyledOurTeamWrapper>
 
         <StyledClients data-aos="fade-right">
-        <StyledTitle><span>Our </span>Clients</StyledTitle>
-          
+          <StyledTitle>
+            <span>Our </span>Clients
+          </StyledTitle>
           Working with our clients is an amazing experience of all time for us.
           Team Ridesignmedia has worked for more than 300 million base on social
           media and also helped thousands of brands to sustain their branding on
@@ -72,32 +119,87 @@ const AboutUs = () => {
           nature with our clients that makes more than a relation of a client
           and media agency.
         </StyledClients>
-        <Counter/>
+        {/* <StyledWrapper> */}
+
+        <StyledWrapper>
+          <Slider {...settings} style={{textAlign: 'center'}}>
+          {TestimonialsModel.map((testimonial) => (
+            <Testimonial testimonial={testimonial} />
+          ))}
+          </Slider>
+        </StyledWrapper>
+        {/* <Carousel
+          plugins={[
+            "arrows",
+            "centered",
+            "infinite",
+            {
+              resolve: slidesToShowPlugin,
+              options: {
+                numberOfSlides: 3,
+              },
+            },
+          ]}
+          breakpoints={{
+            1024: {
+              plugins: [
+                {
+                  resolve: slidesToShowPlugin,
+                  options: {
+                    numberOfSlides: 2
+                  }
+                }
+              ]
+            },
+            798: {
+              plugins: [
+                {
+                  resolve: slidesToShowPlugin,
+                  options: {
+                    numberOfSlides: 1
+                  }
+                }
+              ]
+            }
+          }}
+        >
+          {TestimonialsModel.map((testimonial) => (
+            <Testimonial testimonial={testimonial} />
+          ))}
+        </Carousel> */}
+        {/* </StyledWrapper> */}
+        <Counter />
       </StyledContainer>
       <StyledHR />
     </>
   );
 };
 
+const StyledWrapper = styled.div`
+  /* display: flex; */
+  /* flex-wrap: wrap-reverse; */
+  /* justify-content: space-around; */
+  width: 90%;
+`;
+
 const StyledClients = styled.h2`
-  font-family: 'montserrat', sans-serif;
+  font-family: "montserrat", sans-serif;
   font-weight: lighter;
   color: white;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   padding: 3rem;
   padding-top: 1rem;
   @media only screen and (max-width: 600px) {
-    h1{
+    h1 {
       font-size: 2.5rem;
     }
     font-size: 1rem;
   }
-
 `;
 
 const StyledVideo = styled.video`
@@ -115,8 +217,8 @@ const StyledBrandDescription = styled.div`
 `;
 
 const StyledBrandText = styled.p`
-font-family: 'montserrat', sans-serif;
-font-weight: lighter;
+  font-family: "montserrat", sans-serif;
+  font-weight: lighter;
   color: white;
   word-wrap: normal;
   font-size: 1.5rem;
@@ -131,7 +233,7 @@ font-weight: lighter;
 const StyledBrandLogo = styled.div``;
 
 const StyledOurTeamWrapper = styled.h2`
-font-family: 'montserrat', sans-serif;
+  font-family: "montserrat", sans-serif;
   font-weight: lighter;
   flex-direction: column;
   align-items: center;
@@ -145,7 +247,7 @@ font-family: 'montserrat', sans-serif;
   justify-content: center;
   align-items: center;
   @media only screen and (max-width: 600px) {
-    h1{
+    h1 {
       font-size: 2.5rem;
     }
     font-size: 1rem;

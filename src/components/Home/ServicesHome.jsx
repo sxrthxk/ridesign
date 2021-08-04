@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 
 const ServicesHome = () => {
+
   useEffect(() => {
     Aos.init();
   }, []);

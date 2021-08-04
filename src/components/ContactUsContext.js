@@ -1,5 +1,6 @@
 import React from "react";
 import { useContext, useState } from "react";
+import axios from "axios";
 
 const FormContext = React.createContext();
 
@@ -42,8 +43,8 @@ export default function FormProvider({ children }) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(formData);
-    // axios.post('https://sheet.best/api/sheets/1140f02b-06f6-4d2b-ab10-f7b163a167fb',formData).then(res => console.log(res)).then(() => alert('Successfully Submitted.')).catch(error => console.error(error))
+    // console.log(formData);
+    axios.post('https://sheet.best/api/sheets/1140f02b-06f6-4d2b-ab10-f7b163a167fb',formData).then(res => console.log(res)).then(() => alert('Successfully Submitted.')).catch(error => console.error(error))
 
   };
   

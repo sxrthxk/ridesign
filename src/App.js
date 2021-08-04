@@ -26,7 +26,9 @@ function App() {
   useEffect(() => {
     client
       .getEntries()
-      .then((response) => {setPosts(response.items); console.log(response.items); setBlogAvailable(true)})
+      .then((response) => {setPosts(response.items);
+        //  console.log(response.items); 
+         setBlogAvailable(true)})
       .catch(console.error);
   }, []);
 
@@ -40,7 +42,7 @@ function App() {
   // }
   useEffect(() => {
     window.addEventListener("load", () => {
-      console.log("Loaded")
+      // console.log("Loaded")
     })
     
   }, [])

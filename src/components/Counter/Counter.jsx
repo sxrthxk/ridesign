@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Counter = () => {
-  return (
+
+return (
     <StyledWrapper>
       <StyledCard>
         <h1>Clients</h1>
