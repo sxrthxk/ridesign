@@ -23,7 +23,8 @@ const StyledQuote = styled.div`
 display: flex;
 text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
     font-weight: bold;
-    width: 15rem;
+    /* width: 15rem; */
+    padding: 1rem;
     /* background-color: teal; */
     /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 
     99.8% );; */
@@ -40,7 +41,7 @@ text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
         fill: white;
         height: 5rem;
         /* width: 5rem; */
-        min-width: 30%;
+        min-width: 40%;
         box-sizing: border-box;
         padding-right: 3rem;
     }
