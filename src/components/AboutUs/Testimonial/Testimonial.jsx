@@ -40,7 +40,7 @@ text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
         fill: white;
         height: 5rem;
         /* width: 5rem; */
-        min-width: 40%;
+        min-width: 30%;
         box-sizing: border-box;
         padding-right: 3rem;
     }
@@ -85,6 +85,10 @@ width: fit-content;
 
     @media only screen and (max-width: 868px) {
         margin: 2rem;
+    }
+    @media only screen and (max-width: 498px) {
+        margin: 1rem;
+        width: 90%;
     }
 `;
 

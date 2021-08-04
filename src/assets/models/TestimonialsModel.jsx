@@ -3,7 +3,7 @@ import img1 from '../images/worksamples/1 (2)c.jpg'
 export const TestimonialsModel = [
     {
         name: "Grant Connor",
-        designation: "CEO",
+        designation: "CEO, nuggetsbygrant",
         avi: img1,
         quote: "Very Well Work, the work was completed on time and was polished as well. Would definiately like to work again.",
         gradient: "radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );"
