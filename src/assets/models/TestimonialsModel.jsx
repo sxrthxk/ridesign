@@ -1,17 +1,19 @@
 import img1 from '../images/worksamples/1 (2)c.jpg'
+import nuggetsbygrant from '../../assets/images/testimonials/nuggetsbygrant.jpg'
+import paul from '../../assets/images/testimonials/paul.jpg'
 
 export const TestimonialsModel = [
     {
         name: "Grant Connor",
         designation: "CEO, nuggetsbygrant",
-        avi: img1,
-        quote: "Very Well Work, the work was completed on time and was polished as well. Would definiately like to work again.",
+        avi: nuggetsbygrant,
+        quote: "The overall service was better than I expected. The team has really helped me to understand the underlying issue and solve it.",
         gradient: "radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );"
     },
     {
-        name: "John Doe",
-        designation: "CEO",
-        avi: img1,
+        name: "Paul",
+        designation: "CEO, paul",
+        avi: paul,
         quote: "Very Well Work, the work was completed on time and was polished as well. Would definiately like to work again.",
         gradient: "radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );"
     },

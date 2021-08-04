@@ -179,6 +179,7 @@ const AboutUs = () => {
 };
 
 const StyledWrapper = styled.div`
+margin: auto;
   text-align: center;
   /* display: flex; */
   /* flex-wrap: wrap-reverse; */

@@ -20,6 +20,8 @@ const Testimonial = ({testimonial}) => {
 }
 
 const StyledQuote = styled.div`
+/* height: 236px; */
+box-sizing: border-box;
 display: flex;
 text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
     font-weight: bold;
@@ -76,6 +78,8 @@ p{
 `;
 
 const StyledCard = styled.div`
+height: 420px;
+max-height: 420px;
 margin: 2.5rem;
 overflow: hidden;
 border-radius: 1rem;
