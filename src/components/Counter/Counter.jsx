@@ -43,9 +43,20 @@ const StyledCard = styled.div`
       color: black;
 
   }
+
+  @media only screen and (max-width: 768px) {
+    h1{
+      font-size: 1.5rem;
+    }
+    p{
+      font-size: 3rem;
+    }
+  }
 `;
 
 const StyledWrapper = styled.div`
+box-sizing: border-box;
+max-width: 100%;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
