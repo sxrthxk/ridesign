@@ -49,7 +49,7 @@ const AboutUs = () => {
           {
             breakpoint: 868,
             settings: {
-              centerMode: true,
+              centerMode: false,
               centerPadding: '0rem',
               slidesToShow: 1,
             },
