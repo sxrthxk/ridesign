@@ -40,16 +40,17 @@ const AboutUs = () => {
             },
           },
           {
-            breakpoint: 968,
+            breakpoint: 1180,
             settings: {
+              centerMode: false,
               slidesToShow: 2,
             },
           },
           {
-            breakpoint: 920,
+            breakpoint: 868,
             settings: {
-              centerMode: false,
-
+              centerMode: true,
+              centerPadding: '0rem',
               slidesToShow: 1,
             },
           }
@@ -178,9 +179,10 @@ const AboutUs = () => {
 };
 
 const StyledWrapper = styled.div`
+  text-align: center;
   /* display: flex; */
   /* flex-wrap: wrap-reverse; */
-  /* justify-content: space-around; */
+  /* justify-content: center; */
   width: 90%;
 
   .slick-slide.slick-center {

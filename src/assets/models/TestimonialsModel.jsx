@@ -2,7 +2,7 @@ import img1 from '../images/worksamples/1 (2)c.jpg'
 
 export const TestimonialsModel = [
     {
-        name: "John Doe",
+        name: "Grant Connor",
         designation: "CEO",
         avi: img1,
         quote: "Very Well Work, the work was completed on time and was polished as well. Would definiately like to work again.",

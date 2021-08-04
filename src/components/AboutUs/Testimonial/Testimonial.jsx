@@ -75,13 +75,17 @@ p{
 `;
 
 const StyledCard = styled.div`
-margin: 2rem;
+margin: 2.5rem;
 overflow: hidden;
 border-radius: 1rem;
 /* padding: 1rem; */
 width: fit-content;
     background-color: white;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+
+    @media only screen and (max-width: 868px) {
+        margin: 2rem;
+    }
 `;
 
 export default Testimonial
