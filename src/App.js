@@ -11,6 +11,7 @@ import FormProvider from "./components/ContactUsContext";
 import Loader from "react-loader-spinner";
 // import ContactUs from './components/ContactUs'
 import styled from "styled-components";
+import Services from './components/Services'
 
 function App() {
   const Home = React.lazy(() => import("./components/Home"))
