@@ -15,7 +15,6 @@ import styled from "styled-components";
 function App() {
   const Home = React.lazy(() => import("./components/Home"))
   const AboutUs = React.lazy(() => import('./components/AboutUs'))
-  const Services = React.lazy(() => import('./components/Services'))
   const Blogs = React.lazy(() => import("./components/Home/Blogs/Blogs"));
   const BlogPage = React.lazy(() => import("./components/Home/Blogs/BlogPage"));
   const ContactUs = React.lazy(() => import("./components/ContactUs"))

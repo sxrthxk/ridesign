@@ -50,6 +50,7 @@ const ServicesHome = () => {
 };
 
 const StyledCard = styled.div`
+color: black;
 padding: 2rem;
 /* width: 15rem; */
 box-sizing: border-box;
