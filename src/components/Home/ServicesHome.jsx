@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import Aos from "aos";
 
 const ServicesHome = () => {
-
   useEffect(() => {
     Aos.init();
   }, []);
@@ -19,29 +18,27 @@ const ServicesHome = () => {
       </StyledTitle>
       <StyledWrapper>
         {ServicesObject.map((service) => {
-
           return (
-               <StyledHashLink to={`/services#${service.id}`}>
-
-            <StyledCard>
-              <StyledAvatar src={service.bgImage}/>
-              <h1>{service.title}</h1>
-            </StyledCard>
+            <StyledHashLink key={service.key} to={`/services#${service.id}`}>
+              <StyledCard>
+                <StyledAvatar src={service.bgImage} />
+                <h1>{service.title}</h1>
+              </StyledCard>
             </StyledHashLink>
-          )
+          );
           // return (
-            // <StyledBrand key={service.key} data-aos="fade-up">
-            //   <StyledHashLink to={`/services#${service.id}`}>
-            //     <StyledAvatar src={service.bgImage}>
-            //       {/* <StyledSeeMore >
-            //       <StyledHashLink to={`/services#${service.id}`}>
-            //       See More
-            //       </StyledHashLink>
-            //       </StyledSeeMore> */}
-            //     </StyledAvatar>
-            //   </StyledHashLink>
-            //   <StyledTitleHashLink to={`/services#${service.id}`}>{service.title}</StyledTitleHashLink>
-            // </StyledBrand>
+          // <StyledBrand key={service.key} data-aos="fade-up">
+          //   <StyledHashLink to={`/services#${service.id}`}>
+          //     <StyledAvatar src={service.bgImage}>
+          //       {/* <StyledSeeMore >
+          //       <StyledHashLink to={`/services#${service.id}`}>
+          //       See More
+          //       </StyledHashLink>
+          //       </StyledSeeMore> */}
+          //     </StyledAvatar>
+          //   </StyledHashLink>
+          //   <StyledTitleHashLink to={`/services#${service.id}`}>{service.title}</StyledTitleHashLink>
+          // </StyledBrand>
           // );
         })}
       </StyledWrapper>
@@ -50,17 +47,17 @@ const ServicesHome = () => {
 };
 
 const StyledCard = styled.div`
-color: black;
-padding: 2rem;
-/* width: 15rem; */
-box-sizing: border-box;
-display: flex;
-flex-direction: column;
-align-items: center;
-flex-wrap: wrap;
-justify-content: center;
-text-align: center;
-border-radius: 1rem;
+  color: black;
+  padding: 2rem;
+  /* width: 15rem; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
   background-color: white;
 `;
 
@@ -84,8 +81,8 @@ const StyledAvatar = styled.img`
   aspect-ratio: 1/1;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 2px 2px 4px 4px rgba(255,255,255,0.3),
-  -2px -2px 4px 4px rgba(255,255,255,0.3);
+  box-shadow: 2px 2px 4px 4px rgba(255, 255, 255, 0.3),
+    -2px -2px 4px 4px rgba(255, 255, 255, 0.3);
   @media only screen and (max-width: 600px) {
     width: 7.5rem;
     margin: 10px;

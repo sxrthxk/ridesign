@@ -127,7 +127,7 @@ const AboutUs = () => {
         <StyledWrapper>
           <Slider {...settings} style={{textAlign: 'center'}}>
           {TestimonialsModel.map((testimonial) => (
-            <Testimonial testimonial={testimonial} />
+            <Testimonial testimonial={testimonial} key={testimonial.key}/>
           ))}
           </Slider>
         </StyledWrapper>
@@ -192,11 +192,11 @@ margin: auto;
     }
 `;
 
-const StyledClients = styled.h2`
+const StyledClients = styled.div`
   font-family: "montserrat", sans-serif;
   font-weight: lighter;
   color: white;
-
+    font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -242,7 +242,8 @@ const StyledBrandText = styled.p`
 
 const StyledBrandLogo = styled.div``;
 
-const StyledOurTeamWrapper = styled.h2`
+const StyledOurTeamWrapper = styled.div`
+font-size: 1.5rem;
   font-family: "montserrat", sans-serif;
   font-weight: lighter;
   flex-direction: column;

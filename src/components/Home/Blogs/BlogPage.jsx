@@ -49,7 +49,7 @@ font-family: 'montserrat', sans-serif;
     margin: 20px 40px;
 `;
 
-const StyledContent = styled.p`
+const StyledContent = styled.div`
 line-height: 1.75rem;
 font-family: 'montserrat', sans-serif;
 
