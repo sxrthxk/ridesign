@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import image1 from "../../assets/images/worksamples/1 (2)c.jpg";
-import image2 from "../../assets/images/worksamples/2 (2)c.jpg";
-import image7 from '../../assets/images/worksamples/4 (2)c.jpg'
-import image8 from '../../assets/images/worksamples/Copy of Untitled (4)c.jpg'
+import image1 from "../../assets/images/worksamples/1 (2)c_compressed.jpg";
+import image2 from "../../assets/images/worksamples/2 (2)c_compressed.jpg";
+import image7 from '../../assets/images/worksamples/4 (2)c_compressed.jpg'
+import image8 from '../../assets/images/worksamples/Copy of Untitled (4)c_compressed.jpg'
 import { StyledContainer } from "../UI";
 import Aos from "aos";
 

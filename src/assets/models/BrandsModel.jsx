@@ -8,14 +8,14 @@ import transfovation from '../images/brands/transfovation.jpg'
 import ridesignmedia from '../images/brands/ridesignmedia.jpg'
 
 // --------END AVATAR IMPORTS ----------------
-import ridesignmediashow from '../images/brands/showcase/1 (11).jpg'
-import hindustanstockupdatesshow from '../images/brands/showcase/3 (8).jpg'
-import malessoulshow from '../images/brands/showcase/7 (7).jpg'
-import dewasiiishow from '../images/brands/showcase/8 (4).jpg'
-import wtfexitshow from '../images/brands/showcase/2 (10).jpg'
-import teninvestorshow from '../images/brands/showcase/9 (3).jpg'
-import transfovationshow from '../images/brands/showcase/10 (2).jpg'
-import cryptoaxeshow from '../images/brands/showcase/11.jpg'
+import ridesignmediashow from '../images/brands/showcase/1 (11)_compressed.jpg'
+import hindustanstockupdatesshow from '../images/brands/showcase/3 (8)_compressed.jpg'
+import malessoulshow from '../images/brands/showcase/7 (7)_compressed.jpg'
+import dewasiiishow from '../images/brands/showcase/8 (4)_compressed.jpg'
+import wtfexitshow from '../images/brands/showcase/2 (10)_compressed.jpg'
+import teninvestorshow from '../images/brands/showcase/9 (3)_compressed.jpg'
+import transfovationshow from '../images/brands/showcase/10 (2)_compressed.jpg'
+import cryptoaxeshow from '../images/brands/showcase/11_compressed.jpg'
 
 // --------END SHOWCASE IMPORTS --------------
 

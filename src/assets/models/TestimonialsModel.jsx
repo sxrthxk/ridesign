@@ -1,10 +1,10 @@
-import nuggetsbygrant from '../../assets/images/testimonials/nuggetsbygrant.jpg'
-import paul from '../../assets/images/testimonials/paul.jpg'
-import josh from '../../assets/images/testimonials/josh.jpg'
-import traininsane from '../../assets/images/testimonials/traininsane.jpg'
-import armas from '../../assets/images/testimonials/armas.jpg'
-import itsalbie from '../../assets/images/testimonials/itsalbie.jpg'
-import maximo from '../../assets/images/testimonials/maximo.jpg'
+import nuggetsbygrant from '../../assets/images/testimonials/nuggetsbygrant_compressed.jpg'
+import paul from '../../assets/images/testimonials/paul_compressed.jpg'
+import josh from '../../assets/images/testimonials/josh_compressed.jpg'
+import traininsane from '../../assets/images/testimonials/traininsane_compressed.jpg'
+import armas from '../../assets/images/testimonials/armas_compressed.jpg'
+import itsalbie from '../../assets/images/testimonials/itsalbie_compressed.jpg'
+import maximo from '../../assets/images/testimonials/maximo_compressed.jpg'
 
 export const TestimonialsModel = [
     {
@@ -49,7 +49,7 @@ export const TestimonialsModel = [
     },
     {
         key: 6,
-        name: "Albert Albie Aldahawi",
+        name: "Albert Albie",
         designation: "Pro Wrestler",
         avi: itsalbie,
         quote: "Very Well Work, the work was completed on time and was polished as well. Would definiately like to work again.",

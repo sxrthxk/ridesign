@@ -1,21 +1,21 @@
-import management from "../images/services/SOCIAL MEDIA MANAGEMENT.png";
-import videocreation from '../images/services/Video Creation.png'
-import webdev from '../images/services/Website Designing.png'
-import branding from '../images/services/Branding.png'
-import campaigncreation from '../images/services/camopaign creation.png'
-import contentcreation from '../images/services/Content Creation.png'
-import logodesign from '../images/services/Logo Designing.png'
-import mememarketing from '../images/services/Meme Marketing.png'
+import management from "../images/services/SOCIAL MEDIA MANAGEMENT_compressed.jpg";
+import videocreation from '../images/services/Video Creation_compressed.jpg'
+import webdev from '../images/services/Website Designing_compressed.jpg'
+import branding from '../images/services/Branding_compressed.jpg'
+import campaigncreation from '../images/services/camopaign creation_compressed.jpg'
+import contentcreation from '../images/services/Content Creation_compressed.jpg'
+import logodesign from '../images/services/Logo Designing_compressed.jpg'
+import mememarketing from '../images/services/Meme Marketing_compressed.jpg'
 // -------------end img imports
 
-import managementbg from "../images/services/bg/1_.jpg"
-import videocreationbg from '../images/services/bg/5_.jpg'
-import webdevbg from '../images/services/bg/8_.jpg'
-import brandingbg from '../images/services/bg/3_.jpg'
-import campaigncreationbg from '../images/services/bg/7_.jpg'
-import contentcreationbg from '../images/services/bg/4_.jpg'
-import logodesignbg from '../images/services/bg/2_.jpg'
-import mememarketingbg from '../images/services/bg/6_.jpg'
+import managementbg from "../images/services/bg/1_compressed.png"
+import videocreationbg from '../images/services/bg/5_compressed.png'
+import webdevbg from '../images/services/bg/8_compressed.png'
+import brandingbg from '../images/services/bg/3_compressed.png'
+import campaigncreationbg from '../images/services/bg/7_compressed.png'
+import contentcreationbg from '../images/services/bg/4_compressed.png'
+import logodesignbg from '../images/services/bg/2_compressed.png'
+import mememarketingbg from '../images/services/bg/6_compressed.png'
 
 const ServicesObject = [
   {
@@ -87,7 +87,7 @@ const ServicesObject = [
   {
     key: 8,
     id: "web-dev",
-    title: "Web Development/Design",
+    title: "Web Development",
     content: "A website is also important because it helps to establish credibility as a business. Websites usually provide a map and directions to the company's shops or offices for visitors to find their location easily.    That's what the reason team RiDesignMedia has came up with the service of website designing. We have designed different websites in different niches as we have professionals for the service with super amazing idea's which will draw super amazing attention to your website.",
     image: webdev,
     bgImage: webdevbg,

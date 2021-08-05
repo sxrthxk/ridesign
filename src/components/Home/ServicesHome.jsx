@@ -19,40 +19,64 @@ const ServicesHome = () => {
       </StyledTitle>
       <StyledWrapper>
         {ServicesObject.map((service) => {
+
           return (
-            <StyledBrand key={service.key} data-aos="fade-up">
-              <StyledHashLink to={`/services#${service.id}`}>
-                <StyledAvatar src={service.bgImage}>
-                  {/* <StyledSeeMore >
-              <StyledHashLink to={`/services#${service.id}`}>
-                See More
-              </StyledHashLink>
-            </StyledSeeMore> */}
-                </StyledAvatar>
-              </StyledHashLink>
-              <StyledTitleHashLink to={`/services#${service.id}`}>{service.title}</StyledTitleHashLink>
-            </StyledBrand>
-          );
+               <StyledHashLink to={`/services#${service.id}`}>
+
+            <StyledCard>
+              <StyledAvatar src={service.bgImage}/>
+              <h1>{service.title}</h1>
+            </StyledCard>
+            </StyledHashLink>
+          )
+          // return (
+            // <StyledBrand key={service.key} data-aos="fade-up">
+            //   <StyledHashLink to={`/services#${service.id}`}>
+            //     <StyledAvatar src={service.bgImage}>
+            //       {/* <StyledSeeMore >
+            //       <StyledHashLink to={`/services#${service.id}`}>
+            //       See More
+            //       </StyledHashLink>
+            //       </StyledSeeMore> */}
+            //     </StyledAvatar>
+            //   </StyledHashLink>
+            //   <StyledTitleHashLink to={`/services#${service.id}`}>{service.title}</StyledTitleHashLink>
+            // </StyledBrand>
+          // );
         })}
       </StyledWrapper>
     </StyledContainer>
   );
 };
 
-const StyledBrand = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  margin: 20px;
-  word-wrap: break-word;
-  @media only screen and (max-width: 600px) {
-    h1 {
-      /* word-wrap: break-word; */
-    }
-  }
+const StyledCard = styled.div`
+padding: 2rem;
+/* width: 15rem; */
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-wrap: wrap;
+justify-content: center;
+text-align: center;
+border-radius: 1rem;
+  background-color: white;
 `;
+
+// const StyledBrand = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   margin: 20px;
+//   word-wrap: break-word;
+//   @media only screen and (max-width: 600px) {
+//     h1 {
+//       /* word-wrap: break-word; */
+//     }
+//   }
+// `;
 
 const StyledAvatar = styled.img`
   width: 10rem;
@@ -102,22 +126,24 @@ const StyledWrapper = styled.div`
   } */
 `;
 
-const StyledTitleHashLink = styled(HashLink)`
-color: white;
-text-align: center;
-  width: auto;
-  font-weight: lighter;
-  font-size: 2rem;
-  overflow-wrap: break-word;
-`;
+// const StyledTitleHashLink = styled(HashLink)`
+// color: white;
+// text-align: center;
+//   width: auto;
+//   font-weight: lighter;
+//   font-size: 2rem;
+//   overflow-wrap: break-word;
+// `;
 
 const StyledHashLink = styled(HashLink)`
-  border-radius: 50%;
+  margin: 2rem;
+
+  /* border-radius: 50%;
   margin: 50px;
   @media only screen and (max-width: 600px) {
     width: 7.5rem;
     margin: 10px;
-  }
+  } */
 `;
 
 // const StyledSeeMore = styled.h1`
