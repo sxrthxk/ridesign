@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledContainer, StyledHR, StyledTitle } from "../UI";
-import LogoVid from "../../assets/videos/logo-anim.mp4";
+import LogoGif from "../../assets/gif/ezgif.com-gif-maker.gif"
 import OurJourney from "./OurJourney";
 import { useEffect } from "react";
 import Aos from "aos";
@@ -81,19 +81,7 @@ const AboutUs = () => {
             reason we are famous all over the globe.
           </StyledBrandText>
           <StyledBrandLogo>
-            <StyledVideo
-              width="320"
-              height="240"
-              autoPlay={true}
-              muted
-              loop={true}
-              controls={false}
-            >
-              <source src={LogoVid} type="video/mp4" />
-              <h1 style={{ color: "white" }}>
-                Your Browser does not support videos
-              </h1>
-            </StyledVideo>
+          <StyledLogo src={LogoGif} alt="ridesignmedia"/>
           </StyledBrandLogo>
         </StyledBrandDescription>
 
@@ -212,9 +200,9 @@ const StyledClients = styled.div`
   }
 `;
 
-const StyledVideo = styled.video`
-  width: 20rem;
-  height: 20rem;
+const StyledLogo = styled.img`
+width: 20rem;
+height: 20rem;
 `;
 
 const StyledBrandDescription = styled.div`
